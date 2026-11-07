@@ -2718,8 +2718,8 @@
   },
   {
    "path": "tools/merge/verify_merge.py",
-   "bytes": 60221,
-   "sha256": "1ed821aab127732c47f3d23ff7f83c01d213736db687c31568674ec0f30f486b",
+   "bytes": 60499,
+   "sha256": "9c1e9699decdea6772d8188c7ac1561e7fca5467d4190ad3bfa1211b72de2344",
    "origin": "generated",
    "source": null,
    "source_sha256": null,

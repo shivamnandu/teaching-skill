@@ -59,16 +59,21 @@ def sha(b):
 
 
 CACHE_DIRS = {"__pycache__", ".pytest_cache"}
+# Version-control metadata is never part of the package, so a git clone of the skill still verifies.
+VCS_DIRS = {".git", ".hg", ".svn"}
 
 
 def walk(root, include_caches=False):
     """Relative posix paths of every file. Cache debris (bytecode, pytest cache) is ignored unless asked for,
-    so running the test suite never makes the integrity checks fail; G24 asks for it explicitly."""
+    so running the test suite never makes the integrity checks fail; G24 asks for it explicitly.
+    Version-control folders (.git etc.) are always ignored."""
     out = []
     for p in Path(root).rglob("*"):
         if not p.is_file():
             continue
         rel = p.relative_to(root)
+        if any(part in VCS_DIRS for part in rel.parts[:-1]):
+            continue
         if not include_caches and (any(part in CACHE_DIRS for part in rel.parts[:-1]) or rel.suffix == ".pyc"):
             continue
         out.append(rel.as_posix())
