@@ -1,0 +1,800 @@
+{
+ "version": 1,
+ "skill_name": "teaching-skill",
+ "upstream": {
+  "name": "teaching-skills",
+  "version": "1.2.0",
+  "author": "Jiaxing Yu",
+  "license": "MIT",
+  "repository": "https://github.com/YujxZJCN/teaching-skills"
+ },
+ "exclusions": {
+  "dir_names": [
+   "__pycache__"
+  ],
+  "globs": [
+   "*.pyc"
+  ],
+  "path_prefixes": [
+   "skills/"
+  ],
+  "why": {
+   "__pycache__/*.pyc": "compiled bytecode caches (derived build debris)",
+   "skills/": "15 git-symlink stub files, each just '../<skill>' — redundant when the skills are modules of one skill (verified by gate G01)"
+  }
+ },
+ "moves": [
+  {
+   "id": "R01",
+   "kind": "rename",
+   "from": "accreditation-mapper/SKILL.md",
+   "to": "accreditation-mapper/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R02",
+   "kind": "rename",
+   "from": "assessment-architect/SKILL.md",
+   "to": "assessment-architect/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R03",
+   "kind": "rename",
+   "from": "bilingual-courseware/SKILL.md",
+   "to": "bilingual-courseware/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R04",
+   "kind": "rename",
+   "from": "cohort-analyst/SKILL.md",
+   "to": "cohort-analyst/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R05",
+   "kind": "rename",
+   "from": "course-designer/SKILL.md",
+   "to": "course-designer/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R06",
+   "kind": "rename",
+   "from": "course-publisher/SKILL.md",
+   "to": "course-publisher/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R07",
+   "kind": "rename",
+   "from": "deck-studio/SKILL.md",
+   "to": "deck-studio/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R08",
+   "kind": "rename",
+   "from": "lab-forge/SKILL.md",
+   "to": "lab-forge/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R09",
+   "kind": "rename",
+   "from": "lesson-builder/SKILL.md",
+   "to": "lesson-builder/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R10",
+   "kind": "rename",
+   "from": "media-scripter/SKILL.md",
+   "to": "media-scripter/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R11",
+   "kind": "rename",
+   "from": "student-mentor/SKILL.md",
+   "to": "student-mentor/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R12",
+   "kind": "rename",
+   "from": "submission-auditor/SKILL.md",
+   "to": "submission-auditor/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R13",
+   "kind": "rename",
+   "from": "ta-coordinator/SKILL.md",
+   "to": "ta-coordinator/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R14",
+   "kind": "rename",
+   "from": "teaching-pipeline/SKILL.md",
+   "to": "teaching-pipeline/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "R15",
+   "kind": "rename",
+   "from": "teaching-reflector/SKILL.md",
+   "to": "teaching-reflector/WORKFLOW.md",
+   "why": "exactly one SKILL.md may exist in a skill (Skills API / claude.ai reject nested ones); the module entry file keeps its content under the name WORKFLOW.md"
+  },
+  {
+   "id": "L01",
+   "kind": "relocate",
+   "from": ".claude-plugin/plugin.json",
+   "to": "upstream/claude-plugin/plugin.json",
+   "why": "plugin manifest describes the upstream plugin; a live .claude-plugin/ at the skill root would look like a (broken) plugin, so it is archived"
+  },
+  {
+   "id": "L02",
+   "kind": "relocate",
+   "from": ".claude-plugin/marketplace.json",
+   "to": "upstream/claude-plugin/marketplace.json",
+   "why": "same as plugin.json"
+  },
+  {
+   "id": "L03",
+   "kind": "relocate",
+   "from": ".github/ISSUE_TEMPLATE/config.yml",
+   "to": "upstream/github/ISSUE_TEMPLATE/config.yml",
+   "why": "upstream repository/CI file, not skill runtime; archived unmodified"
+  },
+  {
+   "id": "L04",
+   "kind": "relocate",
+   "from": ".github/ISSUE_TEMPLATE/skill-misbehavior.md",
+   "to": "upstream/github/ISSUE_TEMPLATE/skill-misbehavior.md",
+   "why": "upstream repository/CI file, not skill runtime; archived unmodified"
+  },
+  {
+   "id": "L05",
+   "kind": "relocate",
+   "from": ".github/ISSUE_TEMPLATE/skill-request.md",
+   "to": "upstream/github/ISSUE_TEMPLATE/skill-request.md",
+   "why": "upstream repository/CI file, not skill runtime; archived unmodified"
+  },
+  {
+   "id": "L06",
+   "kind": "relocate",
+   "from": ".github/workflows/ci.yml",
+   "to": "upstream/github/workflows/ci.yml",
+   "why": "upstream repository/CI file, not skill runtime; archived unmodified"
+  },
+  {
+   "id": "L07",
+   "kind": "relocate",
+   "from": "scripts/build_codex.py",
+   "to": "upstream/dev/build_codex.py",
+   "why": "upstream release tool: needs git and the upstream SKILL.md layout, so it cannot run inside the merged skill; archived unmodified"
+  },
+  {
+   "id": "L08",
+   "kind": "relocate",
+   "from": "tests/test_build_codex.py",
+   "to": "upstream/dev/test_build_codex.py",
+   "why": "tests the Codex generator; needs git + upstream layout; archived unmodified"
+  }
+ ],
+ "groups": [
+  {
+   "id": "C1",
+   "kind": "correction",
+   "summary": "course-designer description says a 6-agent team; the team is 7",
+   "why": "course-designer/agents/ has 7 files and its own 'Agent Team (7)' heading (async_designer_agent was added in upstream v1.2.0 and the description was not updated)",
+   "items": [
+    {
+     "file": "course-designer/SKILL.md",
+     "old": "6-agent team covering",
+     "new": "7-agent team covering",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "kind": "correction",
+   "summary": "assessment-architect description says a 7-agent team; the team is 10",
+   "why": "assessment-architect/agents/ has 10 files and 'Agent Team (10)' (grade_analyst, group_designer and accommodation_designer were added in v1.2.0)",
+   "items": [
+    {
+     "file": "assessment-architect/SKILL.md",
+     "old": "7-agent team covering",
+     "new": "10-agent team covering",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "kind": "correction",
+   "summary": "student-mentor description says a 5-agent team; the team is 6",
+   "why": "student-mentor/agents/ has 6 files and 'Agent Team (6)' (integrity_case_agent added in v1.2.0)",
+   "items": [
+    {
+     "file": "student-mentor/SKILL.md",
+     "old": "5-agent team covering",
+     "new": "6-agent team covering",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C4",
+   "kind": "correction",
+   "summary": "teaching-pipeline says 'Seven extension skills'; its own table lists eight",
+   "why": "the table directly below the sentence has 8 rows (accreditation-mapper, deck-studio, media-scripter, lab-forge, course-publisher, ta-coordinator, bilingual-courseware, cohort-analyst) and MODE_REGISTRY says '8 extensions'",
+   "items": [
+    {
+     "file": "teaching-pipeline/SKILL.md",
+     "old": "Seven extension skills attach",
+     "new": "Eight extension skills attach",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C5",
+   "kind": "correction",
+   "summary": "ARCHITECTURE section 5b says 'Seven extension skills'; its table lists eight",
+   "why": "same evidence as C4 (the §5b table has 8 rows)",
+   "items": [
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "Seven extension skills layer",
+     "new": "Eight extension skills layer",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C6",
+   "kind": "correction",
+   "summary": "README.md says 84 modes / 71 agents; the registry, manifests and files say 89 / 76",
+   "why": "MODE_REGISTRY totals line, plugin.json, marketplace.json, CHANGELOG v1.2.0 and the filesystem all agree on 89 modes and 76 agents; the README counts are left over from v1.1.x",
+   "items": [
+    {
+     "file": "README.md",
+     "old": "15 skills · 84 modes · 71-agent ensemble",
+     "new": "15 skills · 89 modes · 76-agent ensemble",
+     "count": 1
+    },
+    {
+     "file": "README.md",
+     "old": "for all 84 modes",
+     "new": "for all 89 modes",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C7",
+   "kind": "correction",
+   "summary": "README.zh-CN.md says 84 modes / 71 agents; the truth is 89 / 76",
+   "why": "same evidence as C6 (the Chinese README mirrors the English one)",
+   "items": [
+    {
+     "file": "README.zh-CN.md",
+     "old": "15 个技能 · 84 种模式 · 71 个智能体协同",
+     "new": "15 个技能 · 89 种模式 · 76 个智能体协同",
+     "count": 1
+    },
+    {
+     "file": "README.zh-CN.md",
+     "old": "全部 84 种模式见",
+     "new": "全部 89 种模式见",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C8",
+   "kind": "correction",
+   "summary": "Gate 3.5 documentation omits check Q4 from the executable core and check T4 from two check lists",
+   "why": "scripts/check_quality_gate.py lists Q4 under 'Executable here' and implements it (keyword scan for AI-detection tools in artifacts), and shared/quality_gate_protocol.md defines T4 (unresolved-marker scan, added in v1.2.0); ARCHITECTURE and gate_runner_agent still listed 'Q1/Q2/T1/T2/T4/W1' as the executable core and 'T1-T3'/'T2-T3' as the transparency checks",
+   "items": [
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "(Q1/Q2/T1/T2/T4/W1)",
+     "new": "(Q1/Q2/Q4/T1/T2/T4/W1)",
+     "count": 1
+    },
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "T2–T3 transparency",
+     "new": "T2–T4 transparency",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/agents/gate_runner_agent.md",
+     "old": "# Q1/Q2/T1/T2/T4/W1 executable",
+     "new": "# Q1/Q2/Q4/T1/T2/T4/W1 executable",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/agents/gate_runner_agent.md",
+     "old": "decides Q1/Q2/T1/T2/T4/W1 and marks",
+     "new": "decides Q1/Q2/Q4/T1/T2/T4/W1 and marks",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/agents/gate_runner_agent.md",
+     "old": "3.5: Q1–Q4, T1–T3, U1–U3",
+     "new": "3.5: Q1–Q4, T1–T4, U1–U3",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "C9",
+   "kind": "correction",
+   "summary": "workload_constants.md says the test-blueprint template cites it and that the gate script imports it; neither is true",
+   "why": "only shared/alignment_gate_protocol.md references workload_constants.md (a search of the whole upstream tree finds no other reference), the blueprint template carries its own exam-item time heuristics and cites nothing, and scripts/check_alignment_gate.py hard-codes the same values (10, 20, 15, 40, 0.25) rather than importing a Markdown file. Found while following the exam workflow in the skill-creator smoke test",
+   "items": [
+    {
+     "file": "shared/workload_constants.md",
+     "old": "`scripts/check_alignment_gate.py` imports these via its\nmodule constants; `shared/alignment_gate_protocol.md` and\n`assessment-architect/templates/test_blueprint_template.md` cite this file rather than\nrestating the numbers, so there is one place to adjust them.",
+     "new": "`scripts/check_alignment_gate.py` mirrors these values in its\nmodule constants; `shared/alignment_gate_protocol.md` cites this file rather than\nrestating the numbers, so there is one place to adjust them.",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "N1",
+   "kind": "naming",
+   "summary": "30 command recipes: 'Skill entry' path points at WORKFLOW.md",
+   "why": "the module entry file is WORKFLOW.md in the merged skill; SKILL.md there would now be the router",
+   "items": [
+    {
+     "file": "commands/ts-accredit.md",
+     "old": "`accreditation-mapper/SKILL.md`",
+     "new": "`accreditation-mapper/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-activities.md",
+     "old": "`lesson-builder/SKILL.md`",
+     "new": "`lesson-builder/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-align.md",
+     "old": "`course-designer/SKILL.md`",
+     "new": "`course-designer/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-announce.md",
+     "old": "`course-publisher/SKILL.md`",
+     "new": "`course-publisher/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-audit.md",
+     "old": "`submission-auditor/SKILL.md`",
+     "new": "`submission-auditor/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-calibrate.md",
+     "old": "`ta-coordinator/SKILL.md`",
+     "new": "`ta-coordinator/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-cohort.md",
+     "old": "`cohort-analyst/SKILL.md`",
+     "new": "`cohort-analyst/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-course.md",
+     "old": "`course-designer/SKILL.md`",
+     "new": "`course-designer/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-dashboard.md",
+     "old": "`teaching-pipeline/SKILL.md`",
+     "new": "`teaching-pipeline/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-deck.md",
+     "old": "`deck-studio/SKILL.md`",
+     "new": "`deck-studio/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-diagnostic.md",
+     "old": "`cohort-analyst/SKILL.md`",
+     "new": "`cohort-analyst/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-evals.md",
+     "old": "`teaching-reflector/SKILL.md`",
+     "new": "`teaching-reflector/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-exam.md",
+     "old": "`assessment-architect/SKILL.md`",
+     "new": "`assessment-architect/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-feedback.md",
+     "old": "`student-mentor/SKILL.md`",
+     "new": "`student-mentor/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-full.md",
+     "old": "`teaching-pipeline/SKILL.md`",
+     "new": "`teaching-pipeline/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-glossary.md",
+     "old": "`bilingual-courseware/SKILL.md`",
+     "new": "`bilingual-courseware/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-integrity.md",
+     "old": "`assessment-architect/SKILL.md`",
+     "new": "`assessment-architect/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-lab.md",
+     "old": "`lab-forge/SKILL.md`",
+     "new": "`lab-forge/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-lesson.md",
+     "old": "`lesson-builder/SKILL.md`",
+     "new": "`lesson-builder/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-letter.md",
+     "old": "`student-mentor/SKILL.md`",
+     "new": "`student-mentor/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-midcourse.md",
+     "old": "`teaching-reflector/SKILL.md`",
+     "new": "`teaching-reflector/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-outcomes.md",
+     "old": "`course-designer/SKILL.md`",
+     "new": "`course-designer/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-redesign.md",
+     "old": "`course-designer/SKILL.md`",
+     "new": "`course-designer/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-rubric.md",
+     "old": "`assessment-architect/SKILL.md`",
+     "new": "`assessment-architect/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-script.md",
+     "old": "`media-scripter/SKILL.md`",
+     "new": "`media-scripter/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-spec.md",
+     "old": "`submission-auditor/SKILL.md`",
+     "new": "`submission-auditor/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-statement.md",
+     "old": "`teaching-reflector/SKILL.md`",
+     "new": "`teaching-reflector/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-status.md",
+     "old": "`teaching-pipeline/SKILL.md`",
+     "new": "`teaching-pipeline/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-syllabus.md",
+     "old": "`course-designer/SKILL.md`",
+     "new": "`course-designer/WORKFLOW.md`",
+     "count": 1
+    },
+    {
+     "file": "commands/ts-translate.md",
+     "old": "`bilingual-courseware/SKILL.md`",
+     "new": "`bilingual-courseware/WORKFLOW.md`",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "N2",
+   "kind": "naming",
+   "summary": "teaching-pipeline agents/references: 'SKILL.md' means the module's entry file",
+   "why": "inside the merged skill a bare SKILL.md is the router, which has different rules; these four mentions cite the pipeline module's own Iron Rules / routing table",
+   "items": [
+    {
+     "file": "teaching-pipeline/agents/passport_keeper_agent.md",
+     "old": "(SKILL.md Iron Rule 6)",
+     "new": "(WORKFLOW.md Iron Rule 6)",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/agents/passport_keeper_agent.md",
+     "old": "(SKILL.md Iron Rule 5)",
+     "new": "(WORKFLOW.md Iron Rule 5)",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/agents/pipeline_orchestrator_agent.md",
+     "old": "Apply the SKILL.md routing table",
+     "new": "Apply the WORKFLOW.md routing table",
+     "count": 1
+    },
+    {
+     "file": "teaching-pipeline/references/pipeline_state_machine.md",
+     "old": "see SKILL.md routing table",
+     "new": "see WORKFLOW.md routing table",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "N3",
+   "kind": "naming",
+   "summary": "docs: statements about a skill's SKILL.md now name WORKFLOW.md",
+   "why": "keeps MODE_REGISTRY, ARCHITECTURE, CLAUDE, CONTRIBUTING and both READMEs true for the merged layout (ARCHITECTURE's build_codex row keeps 'SKILL.md→WORKFLOW.md' on purpose: it describes that rename)",
+   "items": [
+    {
+     "file": "MODE_REGISTRY.md",
+     "old": "update the skill's SKILL.md, this registry",
+     "new": "update the skill's WORKFLOW.md, this registry",
+     "count": 1
+    },
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "each skill's\n`SKILL.md`.",
+     "new": "each skill's\n`WORKFLOW.md`.",
+     "count": 1
+    },
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "three-places rule (SKILL.md ↔ MODE_REGISTRY",
+     "new": "three-places rule (WORKFLOW.md ↔ MODE_REGISTRY",
+     "count": 1
+    },
+    {
+     "file": "CLAUDE.md",
+     "old": "the skill's `SKILL.md`,",
+     "new": "the skill's `WORKFLOW.md`,",
+     "count": 1
+    },
+    {
+     "file": "CONTRIBUTING.md",
+     "old": "Every skill's `SKILL.md` states",
+     "new": "Every skill's `WORKFLOW.md` states",
+     "count": 1
+    },
+    {
+     "file": "CONTRIBUTING.md",
+     "old": "the skill's `SKILL.md`,",
+     "new": "the skill's `WORKFLOW.md`,",
+     "count": 1
+    },
+    {
+     "file": "CONTRIBUTING.md",
+     "old": "(`SKILL.md` + `agents/`",
+     "new": "(`WORKFLOW.md` + `agents/`",
+     "count": 1
+    },
+    {
+     "file": "README.md",
+     "old": "course-designer/        SKILL.md +",
+     "new": "course-designer/        WORKFLOW.md +",
+     "count": 1
+    },
+    {
+     "file": "README.md",
+     "old": "teaching-pipeline/      SKILL.md +",
+     "new": "teaching-pipeline/      WORKFLOW.md +",
+     "count": 1
+    },
+    {
+     "file": "README.md",
+     "old": "(the `SKILL.md` content)",
+     "new": "(the `WORKFLOW.md` content)",
+     "count": 1
+    },
+    {
+     "file": "README.zh-CN.md",
+     "old": "course-designer/        SKILL.md +",
+     "new": "course-designer/        WORKFLOW.md +",
+     "count": 1
+    },
+    {
+     "file": "README.zh-CN.md",
+     "old": "teaching-pipeline/      SKILL.md +",
+     "new": "teaching-pipeline/      WORKFLOW.md +",
+     "count": 1
+    },
+    {
+     "file": "README.zh-CN.md",
+     "old": "（`SKILL.md` 内容）",
+     "new": "（`WORKFLOW.md` 内容）",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "P1",
+   "kind": "path",
+   "summary": "references to relocated upstream files now point at their new home",
+   "why": "build_codex.py and ci.yml moved under upstream/ (see L-moves); without this the docs would name files that no longer exist at those paths",
+   "items": [
+    {
+     "file": "README.md",
+     "old": "`scripts/build_codex.py`",
+     "new": "`upstream/dev/build_codex.py`",
+     "count": 1
+    },
+    {
+     "file": "README.zh-CN.md",
+     "old": "`scripts/build_codex.py`",
+     "new": "`upstream/dev/build_codex.py`",
+     "count": 1
+    },
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "`scripts/build_codex.py`",
+     "new": "`upstream/dev/build_codex.py`",
+     "count": 1
+    },
+    {
+     "file": "docs/ARCHITECTURE.md",
+     "old": "`.github/workflows/ci.yml`",
+     "new": "`upstream/github/workflows/ci.yml`",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "S1",
+   "kind": "script-patch",
+   "summary": "scripts/check_links.py accepts WORKFLOW.md skill folders and checks tools/ + upstream/ refs",
+   "why": "the link checker discovers skill folders by looking for SKILL.md; in the merged layout that file is WORKFLOW.md, so without this patch every skill-relative reference would be skipped as 'external'",
+   "items": [
+    {
+     "file": "scripts/check_links.py",
+     "old": "SKIP_DIRS = {\".git\", \"dist\", \"node_modules\"}\n",
+     "new": "SKIP_DIRS = {\".git\", \"dist\", \"node_modules\"}\n# A skill's entry file: SKILL.md (upstream layout) or WORKFLOW.md (merged single-skill layout).\nENTRY_NAMES = (\"WORKFLOW.md\", \"SKILL.md\")\n",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_links.py",
+     "old": "\"references\", \"templates\", \"agents\"}",
+     "new": "\"references\", \"templates\", \"agents\", \"tools\", \"upstream\"}",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_links.py",
+     "old": "if d.is_dir() and (d / \"SKILL.md\").exists()}",
+     "new": "if d.is_dir() and any((d / n).exists() for n in ENTRY_NAMES)}",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "kind": "script-patch",
+   "summary": "scripts/check_registry_consistency.py accepts WORKFLOW.md entry files and finds the archived manifests",
+   "why": "the registry lint (R1-R9) discovers skills via SKILL.md and reads .claude-plugin/*.json; in the merged layout those are WORKFLOW.md and upstream/claude-plugin/*.json",
+   "items": [
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "TABLE_HEADER_CELLS = {\"mode\", \"command\", \"purpose\", \"trigger-intent\"}\n",
+     "new": "TABLE_HEADER_CELLS = {\"mode\", \"command\", \"purpose\", \"trigger-intent\"}\n\n# A skill's entry file: SKILL.md (upstream layout) or WORKFLOW.md (merged single-skill layout).\nENTRY_NAMES = (\"WORKFLOW.md\", \"SKILL.md\")\n\n\ndef entry_file(skill_dir):\n    for name in ENTRY_NAMES:\n        if (skill_dir / name).exists():\n            return skill_dir / name\n    return None\n",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "                        if d.is_dir() and (d / \"SKILL.md\").exists())",
+     "new": "                        if d.is_dir() and entry_file(d))",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "modes = skill_modes(d / \"SKILL.md\")",
+     "new": "modes = skill_modes(entry_file(d))",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "f\"R2: {name} mode mismatch — only in SKILL.md: {only_skill or '—'}; \"",
+     "new": "f\"R2: {name} mode mismatch — only in {entry_file(d).name}: {only_skill or '—'}; \"",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "declared_agents = skill_agent_count(d / \"SKILL.md\")",
+     "new": "declared_agents = skill_agent_count(entry_file(d))",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "f\"R4: {name} SKILL.md declares Agent Team ({declared_agents}), \"",
+     "new": "f\"R4: {name} {entry_file(d).name} declares Agent Team ({declared_agents}), \"",
+     "count": 1
+    },
+    {
+     "file": "scripts/check_registry_consistency.py",
+     "old": "    plugin_p = root / \".claude-plugin\" / \"plugin.json\"\n    market_p = root / \".claude-plugin\" / \"marketplace.json\"\n",
+     "new": "    # upstream keeps the manifests in .claude-plugin/; the merged skill archives them under\n    # upstream/claude-plugin/ (so nothing mistakes the skill root for a plugin)\n    manifest_dir = next((c for c in (root / \".claude-plugin\", root / \"upstream\" / \"claude-plugin\")\n                         if c.is_dir()), root / \".claude-plugin\")\n    plugin_p = manifest_dir / \"plugin.json\"\n    market_p = manifest_dir / \"marketplace.json\"\n",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "prepends": [
+  {
+   "id": "B1",
+   "file": "README.md",
+   "why": "the upstream README describes the upstream plugin repo; the banner tells a reader of the merged skill where the truth about this layout lives",
+   "text": "> **Merged-skill note.** This is the upstream *Teaching Skills* README, kept as published apart\n> from the count and naming corrections logged in [MERGE_NOTES.md](MERGE_NOTES.md). In the merged\n> `teaching-skill` skill the 15 skills are modules of one skill: start at\n> [SKILL.md](SKILL.md) (the router). Each module's entry file is `WORKFLOW.md` (not `SKILL.md`) and\n> the plugin/CI files are archived under `upstream/`. Install steps for the merged skill are in\n> [MERGE_NOTES.md](MERGE_NOTES.md), not below.\n\n"
+  },
+  {
+   "id": "B2",
+   "file": "README.zh-CN.md",
+   "why": "same as B1, in Chinese",
+   "text": "> **合并技能说明。** 本文件是上游 *Teaching Skills* 的中文 README，除 [MERGE_NOTES.md](MERGE_NOTES.md)\n> 记录的数量与命名更正外保持原样。在合并后的 `teaching-skill` 技能中，15 个技能是同一技能的模块：\n> 请从 [SKILL.md](SKILL.md)（路由入口）开始。各模块的入口文件为 `WORKFLOW.md`（而非 `SKILL.md`），\n> 插件/CI 文件归档在 `upstream/` 下。合并技能的安装步骤见 [MERGE_NOTES.md](MERGE_NOTES.md)，而非下文。\n\n"
+  }
+ ],
+ "new_files": [
+  "SKILL.md",
+  "INDEX.md",
+  "MANIFEST.json",
+  "MERGE_NOTES.md",
+  "tests/test_merge_integrity.py",
+  "tools/merge/README.md",
+  "tools/merge/build_merge.py",
+  "tools/merge/verify_merge.py",
+  "tools/merge/gate_run.py",
+  "tools/merge/make_edits.py",
+  "tools/merge/edits.json",
+  "tools/merge/router_template.md",
+  "tools/merge/notes_template.md",
+  "tools/merge/GATES.md"
+ ],
+ "new_file_globs": [
+  "install/claude-code-commands/*.md"
+ ]
+}

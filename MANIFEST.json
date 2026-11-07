@@ -1,0 +1,2817 @@
+{
+ "schema": 1,
+ "skill": "teaching-skill",
+ "generated": "2026-09-26",
+ "upstream": {
+  "name": "teaching-skills",
+  "version": "1.2.0",
+  "author": "Jiaxing Yu",
+  "license": "MIT",
+  "repository": "https://github.com/YujxZJCN/teaching-skills"
+ },
+ "counts": {
+  "source_files": 279,
+  "carried": 246,
+  "excluded": 33,
+  "identical": 180,
+  "edited": 66,
+  "generated": 44,
+  "total_in_package": 291,
+  "modules": 15,
+  "modes": 89,
+  "agents": 76,
+  "aliases": 30
+ },
+ "excluded": [
+  "scripts/__pycache__/build_codex.cpython-312.pyc",
+  "scripts/__pycache__/build_dashboard.cpython-312.pyc",
+  "scripts/__pycache__/check_alignment_gate.cpython-312.pyc",
+  "scripts/__pycache__/check_content_markers.cpython-312.pyc",
+  "scripts/__pycache__/check_links.cpython-312.pyc",
+  "scripts/__pycache__/check_passport.cpython-312.pyc",
+  "scripts/__pycache__/check_quality_gate.cpython-312.pyc",
+  "scripts/__pycache__/check_registry_consistency.cpython-312.pyc",
+  "scripts/__pycache__/export_lms.cpython-312.pyc",
+  "scripts/__pycache__/render_document.cpython-312.pyc",
+  "skills/accreditation-mapper",
+  "skills/assessment-architect",
+  "skills/bilingual-courseware",
+  "skills/cohort-analyst",
+  "skills/course-designer",
+  "skills/course-publisher",
+  "skills/deck-studio",
+  "skills/lab-forge",
+  "skills/lesson-builder",
+  "skills/media-scripter",
+  "skills/student-mentor",
+  "skills/submission-auditor",
+  "skills/ta-coordinator",
+  "skills/teaching-pipeline",
+  "skills/teaching-reflector",
+  "tests/__pycache__/test_adoption_tooling.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_build_codex.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_content_markers.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_dashboard.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_quality_gate.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_registry.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_repo_integrity.cpython-312-pytest-7.4.4.pyc",
+  "tests/__pycache__/test_validators.cpython-312-pytest-7.4.4.pyc"
+ ],
+ "files": [
+  {
+   "path": ".gitignore",
+   "bytes": 29,
+   "sha256": "538f2001f6e42fd624331ccea169c7af1bf121e14526068b3acc02445fade87c",
+   "origin": "upstream",
+   "source": ".gitignore",
+   "source_sha256": "538f2001f6e42fd624331ccea169c7af1bf121e14526068b3acc02445fade87c",
+   "edits": []
+  },
+  {
+   "path": "CHANGELOG.md",
+   "bytes": 3496,
+   "sha256": "aba8e11989f6661edee40468564d6ec8db66fb7666ec050e6ca94d392f774cef",
+   "origin": "upstream",
+   "source": "CHANGELOG.md",
+   "source_sha256": "aba8e11989f6661edee40468564d6ec8db66fb7666ec050e6ca94d392f774cef",
+   "edits": []
+  },
+  {
+   "path": "CLAUDE.md",
+   "bytes": 2717,
+   "sha256": "608c3c3d1fc5c39b09fbb8e33dd337f2d44219fd3ead0103263ecbc680c215d2",
+   "origin": "upstream",
+   "source": "CLAUDE.md",
+   "source_sha256": "71e98b445afb74e5230f7ad71429d0543e1d39ed3536c0202cf54cdaaac4763d",
+   "edits": [
+    "N3"
+   ]
+  },
+  {
+   "path": "CONTRIBUTING.md",
+   "bytes": 2821,
+   "sha256": "3f1ac09458c1499f93a2bd2277aab0683f5c427f06ab98dcf8cf82685e074254",
+   "origin": "upstream",
+   "source": "CONTRIBUTING.md",
+   "source_sha256": "cce3ed66dceb3a16ddb51887a26bf627a803f52a2b221fba9c1d32d2fbdc2f25",
+   "edits": [
+    "N3"
+   ]
+  },
+  {
+   "path": "INDEX.md",
+   "bytes": 36122,
+   "sha256": "32f4d595b5518d87cec728e9bc585b75ed3ddb7086a275eba1e5789ecf822cb4",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "LICENSE",
+   "bytes": 1067,
+   "sha256": "91398dfa27a546ec4a9e0b5a6410da507529d170dcaec8ce1f018f6d44bf558d",
+   "origin": "upstream",
+   "source": "LICENSE",
+   "source_sha256": "91398dfa27a546ec4a9e0b5a6410da507529d170dcaec8ce1f018f6d44bf558d",
+   "edits": []
+  },
+  {
+   "path": "MERGE_NOTES.md",
+   "bytes": 32238,
+   "sha256": "60f08e16c5dc9e2c690ff9eedefd9907d1d5177f2ca9738ea95c44ed2d37ee12",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "MODE_REGISTRY.md",
+   "bytes": 9324,
+   "sha256": "efd04eace83b67109dbb92fad84b92ada629dcd1a937be19eff70f1424a83f11",
+   "origin": "upstream",
+   "source": "MODE_REGISTRY.md",
+   "source_sha256": "058db9b454b076a5a98fc326068a1c696ffa07c5f40e107854617703e1974975",
+   "edits": [
+    "N3"
+   ]
+  },
+  {
+   "path": "QUICKSTART.md",
+   "bytes": 3361,
+   "sha256": "9f487783fba38e52c7d992814e5ad756adcaf6a5e071bbfc93bc6efa3ae486ef",
+   "origin": "upstream",
+   "source": "QUICKSTART.md",
+   "source_sha256": "9f487783fba38e52c7d992814e5ad756adcaf6a5e071bbfc93bc6efa3ae486ef",
+   "edits": []
+  },
+  {
+   "path": "README.md",
+   "bytes": 12746,
+   "sha256": "7e16c305e93f656a553e1149dd918e1887c35e1581c2d438c72c78adbc2256ac",
+   "origin": "upstream",
+   "source": "README.md",
+   "source_sha256": "4f210f8fecca6002aab20fb7d43ba3be47e2978bd8b2c47072b78c3808cda3f5",
+   "edits": [
+    "C6",
+    "N3",
+    "P1",
+    "B1"
+   ]
+  },
+  {
+   "path": "README.zh-CN.md",
+   "bytes": 13134,
+   "sha256": "b47a631d8e1ef2032df4cffc2008d9315889f8a1d884a283d0cca8da2f4606f3",
+   "origin": "upstream",
+   "source": "README.zh-CN.md",
+   "source_sha256": "5cc9d68279f7dcbe96054908be75f9cac2ba167f281b16dee4072d3ff8846792",
+   "edits": [
+    "C7",
+    "N3",
+    "P1",
+    "B2"
+   ]
+  },
+  {
+   "path": "SKILL.md",
+   "bytes": 32158,
+   "sha256": "bd683214db05864afcb658047fa06b8c498fa5433e0736391ea140b61a3df498",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/WORKFLOW.md",
+   "bytes": 9342,
+   "sha256": "db9215587cf520aa6e44b0d8a4086abc1b6d4b80831bb0ea703ec7df87797641",
+   "origin": "upstream",
+   "source": "accreditation-mapper/SKILL.md",
+   "source_sha256": "db9215587cf520aa6e44b0d8a4086abc1b6d4b80831bb0ea703ec7df87797641",
+   "edits": [
+    "R01"
+   ]
+  },
+  {
+   "path": "accreditation-mapper/agents/evidence_assembler_agent.md",
+   "bytes": 3947,
+   "sha256": "606fa708005d539f49015acad14814f24f40d7f22a62b7f0bb7380b2f8908e55",
+   "origin": "upstream",
+   "source": "accreditation-mapper/agents/evidence_assembler_agent.md",
+   "source_sha256": "606fa708005d539f49015acad14814f24f40d7f22a62b7f0bb7380b2f8908e55",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/agents/matrix_builder_agent.md",
+   "bytes": 3998,
+   "sha256": "4644bd13e5c4cf4777c2b0d34b37f767e3bc39147730cb5c830045ca9707546f",
+   "origin": "upstream",
+   "source": "accreditation-mapper/agents/matrix_builder_agent.md",
+   "source_sha256": "4644bd13e5c4cf4777c2b0d34b37f767e3bc39147730cb5c830045ca9707546f",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/agents/selfstudy_writer_agent.md",
+   "bytes": 4191,
+   "sha256": "fa8b09f69450b94c04fb55b4cbdfb0ced4b2788e58b6330b58a79004ca908475",
+   "origin": "upstream",
+   "source": "accreditation-mapper/agents/selfstudy_writer_agent.md",
+   "source_sha256": "fa8b09f69450b94c04fb55b4cbdfb0ced4b2788e58b6330b58a79004ca908475",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/agents/standards_analyst_agent.md",
+   "bytes": 4071,
+   "sha256": "07584eef403a005d1c83ec25807f59b0e7a4f71b9a1704169a0387344c1e6aec",
+   "origin": "upstream",
+   "source": "accreditation-mapper/agents/standards_analyst_agent.md",
+   "source_sha256": "07584eef403a005d1c83ec25807f59b0e7a4f71b9a1704169a0387344c1e6aec",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/references/accreditation_frameworks.md",
+   "bytes": 5991,
+   "sha256": "11fe1c16ecefa9051cb1a3bd47f4184adf42c63bdadf6de89601e13d6ee10382",
+   "origin": "upstream",
+   "source": "accreditation-mapper/references/accreditation_frameworks.md",
+   "source_sha256": "11fe1c16ecefa9051cb1a3bd47f4184adf42c63bdadf6de89601e13d6ee10382",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/templates/evidence_index_template.md",
+   "bytes": 2841,
+   "sha256": "0050f6da568c1c687395825545507578a9ecca4d9483122e0c50d4d1ed0e7684",
+   "origin": "upstream",
+   "source": "accreditation-mapper/templates/evidence_index_template.md",
+   "source_sha256": "0050f6da568c1c687395825545507578a9ecca4d9483122e0c50d4d1ed0e7684",
+   "edits": []
+  },
+  {
+   "path": "accreditation-mapper/templates/outcome_matrix_template.md",
+   "bytes": 2924,
+   "sha256": "766810c06f2f05f2685ff0cef1253508258e13a0dfe1a10e54a5f4032ed91ce7",
+   "origin": "upstream",
+   "source": "accreditation-mapper/templates/outcome_matrix_template.md",
+   "source_sha256": "766810c06f2f05f2685ff0cef1253508258e13a0dfe1a10e54a5f4032ed91ce7",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/WORKFLOW.md",
+   "bytes": 13895,
+   "sha256": "6834b6678c8d077c295697d6d53d48f76db70bb776185ded143bfaf8251da1d1",
+   "origin": "upstream",
+   "source": "assessment-architect/SKILL.md",
+   "source_sha256": "9052e7c612f3951be52c074ab6a6eb76ce0d81c02a5fef859e913b0d7660082b",
+   "edits": [
+    "R02",
+    "C2"
+   ]
+  },
+  {
+   "path": "assessment-architect/agents/accommodation_designer_agent.md",
+   "bytes": 4721,
+   "sha256": "7b9b238313c5866164e2e46b8a57ef6c43145aaf2962c4d0fcda2ccc4b13d7ad",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/accommodation_designer_agent.md",
+   "source_sha256": "7b9b238313c5866164e2e46b8a57ef6c43145aaf2962c4d0fcda2ccc4b13d7ad",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/answer_key_agent.md",
+   "bytes": 3812,
+   "sha256": "bab411db65df0fa83e6f4e660abbd8bb3748345cfb2fbd72b7814a4ffad1fa8a",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/answer_key_agent.md",
+   "source_sha256": "bab411db65df0fa83e6f4e660abbd8bb3748345cfb2fbd72b7814a4ffad1fa8a",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/blueprint_agent.md",
+   "bytes": 3743,
+   "sha256": "555ef5f330cb4bad5b1d7781e102b8a8d7226d91cd94c3289fe45d075e4f7c8b",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/blueprint_agent.md",
+   "source_sha256": "555ef5f330cb4bad5b1d7781e102b8a8d7226d91cd94c3289fe45d075e4f7c8b",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/grade_analyst_agent.md",
+   "bytes": 4453,
+   "sha256": "1751aada1a76a35280837feb6a18960c7e332f14df39bda0c35ec87b6047ade2",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/grade_analyst_agent.md",
+   "source_sha256": "1751aada1a76a35280837feb6a18960c7e332f14df39bda0c35ec87b6047ade2",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/group_designer_agent.md",
+   "bytes": 4714,
+   "sha256": "0764774920f14577d221e08ad334d03405cffc2b45c1113a231f8696b8e154cd",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/group_designer_agent.md",
+   "source_sha256": "0764774920f14577d221e08ad334d03405cffc2b45c1113a231f8696b8e154cd",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/integrity_auditor_agent.md",
+   "bytes": 3996,
+   "sha256": "30b03bb317bbcfd4508aea3240e0595876ee005bdf30d52b97ff86365c3c18ef",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/integrity_auditor_agent.md",
+   "source_sha256": "30b03bb317bbcfd4508aea3240e0595876ee005bdf30d52b97ff86365c3c18ef",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/item_analyst_agent.md",
+   "bytes": 4223,
+   "sha256": "d907c4e2af4d63c0300fe38b5c59fcc91b177a0c1ae0358b4a515e11092220d9",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/item_analyst_agent.md",
+   "source_sha256": "d907c4e2af4d63c0300fe38b5c59fcc91b177a0c1ae0358b4a515e11092220d9",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/item_writer_agent.md",
+   "bytes": 3927,
+   "sha256": "e4c1a038140609066cd39d5598ac110cb89889e7703159fb71b5fb33ec2c59a0",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/item_writer_agent.md",
+   "source_sha256": "e4c1a038140609066cd39d5598ac110cb89889e7703159fb71b5fb33ec2c59a0",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/project_designer_agent.md",
+   "bytes": 4025,
+   "sha256": "e3dc9fe1f4d75fdabd6cd311f9bb8a63f991b2b91891d257f1ec548c6defc389",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/project_designer_agent.md",
+   "source_sha256": "e3dc9fe1f4d75fdabd6cd311f9bb8a63f991b2b91891d257f1ec548c6defc389",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/agents/rubric_designer_agent.md",
+   "bytes": 4006,
+   "sha256": "784b39713e289c1a7f7205f9cfb3f1ae0a79467e6c36f4fc5d117405350926b1",
+   "origin": "upstream",
+   "source": "assessment-architect/agents/rubric_designer_agent.md",
+   "source_sha256": "784b39713e289c1a7f7205f9cfb3f1ae0a79467e6c36f4fc5d117405350926b1",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/references/grade_analysis_guide.md",
+   "bytes": 6339,
+   "sha256": "34b80b333e91e92394046a288d40fd25976c434fedc96487adc12aaa64c87c8d",
+   "origin": "upstream",
+   "source": "assessment-architect/references/grade_analysis_guide.md",
+   "source_sha256": "34b80b333e91e92394046a288d40fd25976c434fedc96487adc12aaa64c87c8d",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/references/item_writing_rules.md",
+   "bytes": 6289,
+   "sha256": "09750bcedfc8c57f3559a91ca7b6b5c7f2a511fd7e9e976fbf229f127f750111",
+   "origin": "upstream",
+   "source": "assessment-architect/references/item_writing_rules.md",
+   "source_sha256": "09750bcedfc8c57f3559a91ca7b6b5c7f2a511fd7e9e976fbf229f127f750111",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/references/lms_export_format.md",
+   "bytes": 2059,
+   "sha256": "443d66ac9d5a64884b65e82f5b518a65c751f9ef5884a5352e32dbeb6690912d",
+   "origin": "upstream",
+   "source": "assessment-architect/references/lms_export_format.md",
+   "source_sha256": "443d66ac9d5a64884b65e82f5b518a65c751f9ef5884a5352e32dbeb6690912d",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/references/peer_assessment_guide.md",
+   "bytes": 5510,
+   "sha256": "20c042176470eb620dc9f94453baf87a5d5eae010c6a6bc39235e16e82eba3aa",
+   "origin": "upstream",
+   "source": "assessment-architect/references/peer_assessment_guide.md",
+   "source_sha256": "20c042176470eb620dc9f94453baf87a5d5eae010c6a6bc39235e16e82eba3aa",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/references/rubric_patterns.md",
+   "bytes": 5610,
+   "sha256": "0c858dd9dadcb75834870bba32c4474cbc6a336958de8351fdf62190b9478f49",
+   "origin": "upstream",
+   "source": "assessment-architect/references/rubric_patterns.md",
+   "source_sha256": "0c858dd9dadcb75834870bba32c4474cbc6a336958de8351fdf62190b9478f49",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/templates/grade_report_template.md",
+   "bytes": 4329,
+   "sha256": "683a3aa7095208fab69e9323562c553187498a2641ff664b5d0265b0e51aff18",
+   "origin": "upstream",
+   "source": "assessment-architect/templates/grade_report_template.md",
+   "source_sha256": "683a3aa7095208fab69e9323562c553187498a2641ff664b5d0265b0e51aff18",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/templates/group_project_template.md",
+   "bytes": 6206,
+   "sha256": "600e2e4b842ef5d760287b2578d4a9e1e87f4e411ce21d36a5f1180e9e18b20d",
+   "origin": "upstream",
+   "source": "assessment-architect/templates/group_project_template.md",
+   "source_sha256": "600e2e4b842ef5d760287b2578d4a9e1e87f4e411ce21d36a5f1180e9e18b20d",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/templates/project_brief_template.md",
+   "bytes": 4011,
+   "sha256": "df74c8bb4b9c7dd5e5e8a343b5d603309e2c7c8e062e78636a5e281920e200f2",
+   "origin": "upstream",
+   "source": "assessment-architect/templates/project_brief_template.md",
+   "source_sha256": "df74c8bb4b9c7dd5e5e8a343b5d603309e2c7c8e062e78636a5e281920e200f2",
+   "edits": []
+  },
+  {
+   "path": "assessment-architect/templates/test_blueprint_template.md",
+   "bytes": 2711,
+   "sha256": "583421a1b2ff99009b15f4020f5ebcbee3267a9b7bcba93806b4ad5fb3cd5a0c",
+   "origin": "upstream",
+   "source": "assessment-architect/templates/test_blueprint_template.md",
+   "source_sha256": "583421a1b2ff99009b15f4020f5ebcbee3267a9b7bcba93806b4ad5fb3cd5a0c",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/WORKFLOW.md",
+   "bytes": 9187,
+   "sha256": "86c4f1a9ebd98f9cb0b3a5bd4a69ae85670ddc6a84dbc943ea7517c7cffa54bc",
+   "origin": "upstream",
+   "source": "bilingual-courseware/SKILL.md",
+   "source_sha256": "86c4f1a9ebd98f9cb0b3a5bd4a69ae85670ddc6a84dbc943ea7517c7cffa54bc",
+   "edits": [
+    "R03"
+   ]
+  },
+  {
+   "path": "bilingual-courseware/agents/glossary_keeper_agent.md",
+   "bytes": 3941,
+   "sha256": "08a7876a5fefd7990ffb7a5b0751b9a9c4e138b7c965d93757bf9624bf13bfc8",
+   "origin": "upstream",
+   "source": "bilingual-courseware/agents/glossary_keeper_agent.md",
+   "source_sha256": "08a7876a5fefd7990ffb7a5b0751b9a9c4e138b7c965d93757bf9624bf13bfc8",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/agents/parallel_sync_agent.md",
+   "bytes": 3678,
+   "sha256": "2e4ee52dfd64c9b84a3e0e56f5054ba3b5c8d380dfbb0cd1d27218ff9f8ad960",
+   "origin": "upstream",
+   "source": "bilingual-courseware/agents/parallel_sync_agent.md",
+   "source_sha256": "2e4ee52dfd64c9b84a3e0e56f5054ba3b5c8d380dfbb0cd1d27218ff9f8ad960",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/agents/terminology_auditor_agent.md",
+   "bytes": 4054,
+   "sha256": "1b053e6ed3dd98909dc3c9dab35ff2094a53916288a4bc0021443c14a51b9e30",
+   "origin": "upstream",
+   "source": "bilingual-courseware/agents/terminology_auditor_agent.md",
+   "source_sha256": "1b053e6ed3dd98909dc3c9dab35ff2094a53916288a4bc0021443c14a51b9e30",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/agents/translator_agent.md",
+   "bytes": 4202,
+   "sha256": "16292c82618b78cde0d5e91250edba66ddb376adbe0e7df7385a50f4fdba48f4",
+   "origin": "upstream",
+   "source": "bilingual-courseware/agents/translator_agent.md",
+   "source_sha256": "16292c82618b78cde0d5e91250edba66ddb376adbe0e7df7385a50f4fdba48f4",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/references/emi_conventions.md",
+   "bytes": 7598,
+   "sha256": "9f8a53b1b249828f2868349abc799ab07ec027ccfe11de5147383d29fba3a8ae",
+   "origin": "upstream",
+   "source": "bilingual-courseware/references/emi_conventions.md",
+   "source_sha256": "9f8a53b1b249828f2868349abc799ab07ec027ccfe11de5147383d29fba3a8ae",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/templates/glossary_template.md",
+   "bytes": 2757,
+   "sha256": "83bfc6f57eacae74c60b3abed0155adb24b5d7d8fb86c3bdf1d7e15beaf0b717",
+   "origin": "upstream",
+   "source": "bilingual-courseware/templates/glossary_template.md",
+   "source_sha256": "83bfc6f57eacae74c60b3abed0155adb24b5d7d8fb86c3bdf1d7e15beaf0b717",
+   "edits": []
+  },
+  {
+   "path": "bilingual-courseware/templates/sync_register_template.md",
+   "bytes": 2245,
+   "sha256": "5c7f8d550dab7ff30dda821a584d44fc5a4d8a49195990efae1b723df00a2efe",
+   "origin": "upstream",
+   "source": "bilingual-courseware/templates/sync_register_template.md",
+   "source_sha256": "5c7f8d550dab7ff30dda821a584d44fc5a4d8a49195990efae1b723df00a2efe",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/WORKFLOW.md",
+   "bytes": 10481,
+   "sha256": "5a08e26c5910a95e774ecd503dea38d6b4c48dedaefd772618a8e9a3c515bcb5",
+   "origin": "upstream",
+   "source": "cohort-analyst/SKILL.md",
+   "source_sha256": "5a08e26c5910a95e774ecd503dea38d6b4c48dedaefd772618a8e9a3c515bcb5",
+   "edits": [
+    "R04"
+   ]
+  },
+  {
+   "path": "cohort-analyst/agents/calibration_advisor_agent.md",
+   "bytes": 4991,
+   "sha256": "66ab22aeccf0ac6e7a2cf701ceea41aa5eb60e26288f80e0664df609b4834d83",
+   "origin": "upstream",
+   "source": "cohort-analyst/agents/calibration_advisor_agent.md",
+   "source_sha256": "66ab22aeccf0ac6e7a2cf701ceea41aa5eb60e26288f80e0664df609b4834d83",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/agents/cohort_analyst_agent.md",
+   "bytes": 5156,
+   "sha256": "fb6ef23c302d57afbb1bd24a9d34fb72ba3314bb952e6ebd5cab5ef301f96aee",
+   "origin": "upstream",
+   "source": "cohort-analyst/agents/cohort_analyst_agent.md",
+   "source_sha256": "fb6ef23c302d57afbb1bd24a9d34fb72ba3314bb952e6ebd5cab5ef301f96aee",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/agents/diagnostic_designer_agent.md",
+   "bytes": 4947,
+   "sha256": "be9ecd86e3554ab7cb3b2890e4f4bc5c584709d583c27ae6c0c91b30f7554622",
+   "origin": "upstream",
+   "source": "cohort-analyst/agents/diagnostic_designer_agent.md",
+   "source_sha256": "be9ecd86e3554ab7cb3b2890e4f4bc5c584709d583c27ae6c0c91b30f7554622",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/agents/grouping_strategist_agent.md",
+   "bytes": 4737,
+   "sha256": "f4379adbf960164156e235e6cf43efae2c9e9883270457ec63243b54c8f8ea51",
+   "origin": "upstream",
+   "source": "cohort-analyst/agents/grouping_strategist_agent.md",
+   "source_sha256": "f4379adbf960164156e235e6cf43efae2c9e9883270457ec63243b54c8f8ea51",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/references/analytics_honesty.md",
+   "bytes": 9889,
+   "sha256": "281c82d42173ce45376790b623c4a1a265fea481f0ce8418a7ef08dff4119209",
+   "origin": "upstream",
+   "source": "cohort-analyst/references/analytics_honesty.md",
+   "source_sha256": "281c82d42173ce45376790b623c4a1a265fea481f0ce8418a7ef08dff4119209",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/references/diagnostic_design_guide.md",
+   "bytes": 8775,
+   "sha256": "fab81279a00eee362faac7af89ec498ddc0a7c814c28f4620094729d1497659e",
+   "origin": "upstream",
+   "source": "cohort-analyst/references/diagnostic_design_guide.md",
+   "source_sha256": "fab81279a00eee362faac7af89ec498ddc0a7c814c28f4620094729d1497659e",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/templates/cohort_profile_template.md",
+   "bytes": 4952,
+   "sha256": "4222441c4e115423835b397378cf092995db9dcc8e77c6f04d7bec6193d4ac62",
+   "origin": "upstream",
+   "source": "cohort-analyst/templates/cohort_profile_template.md",
+   "source_sha256": "4222441c4e115423835b397378cf092995db9dcc8e77c6f04d7bec6193d4ac62",
+   "edits": []
+  },
+  {
+   "path": "cohort-analyst/templates/diagnostic_template.md",
+   "bytes": 3995,
+   "sha256": "5009d196ab06754d5d792964bf32003be3dca789bc90767d8c38f324b3563b11",
+   "origin": "upstream",
+   "source": "cohort-analyst/templates/diagnostic_template.md",
+   "source_sha256": "5009d196ab06754d5d792964bf32003be3dca789bc90767d8c38f324b3563b11",
+   "edits": []
+  },
+  {
+   "path": "commands/ts-accredit.md",
+   "bytes": 432,
+   "sha256": "f3f1fed4fa51467be1f9b3887a17dd42e832b7b764913df862c194b8ee2ae617",
+   "origin": "upstream",
+   "source": "commands/ts-accredit.md",
+   "source_sha256": "4f41248d11f397ce012ddc55b46218100ba5e64b6f5563806631de0268b3ccc1",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-activities.md",
+   "bytes": 369,
+   "sha256": "a0721a3190001b4e6964a8e6228b561acf13cfc4849e891dc2cdab28eaa3572f",
+   "origin": "upstream",
+   "source": "commands/ts-activities.md",
+   "source_sha256": "3a9c28541aa153de1274b0378e8f93e96278b67992e426fa6c081610d7f4d799",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-align.md",
+   "bytes": 325,
+   "sha256": "051a22bbdeba3948d1bb3ad64e50d471622aada3872311e80801cb5b78588bd9",
+   "origin": "upstream",
+   "source": "commands/ts-align.md",
+   "source_sha256": "cf886d592632c2e5f8c52d85bd2bf534ffd8a2d8aff7b47e4d487cfa6974a333",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-announce.md",
+   "bytes": 355,
+   "sha256": "39e27f5c65d14b1b7b102aef4f5e1c1a7c4a32d29931d45f6a4598351e97e56f",
+   "origin": "upstream",
+   "source": "commands/ts-announce.md",
+   "source_sha256": "be8ddece925a6df291ff5ccc8d3685b8512ecfa0d88f74e195534876d6121a58",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-audit.md",
+   "bytes": 497,
+   "sha256": "304d829bcbf171cad22f00b58f3fe010228646862cbc9be5b1a6781c7e732271",
+   "origin": "upstream",
+   "source": "commands/ts-audit.md",
+   "source_sha256": "faf4af64feb13af2031bc39da61d8cd289f3b0fbae0bdac06339196f56d1f300",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-calibrate.md",
+   "bytes": 363,
+   "sha256": "ca37e6b870c5a35f399e82a08703b328312e8c401ef7c867f0ce292cce20f55e",
+   "origin": "upstream",
+   "source": "commands/ts-calibrate.md",
+   "source_sha256": "193d1dab45f735143a8bbbd453bbe07d5e8097eae26b191a3b5c72535dcf19ff",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-cohort.md",
+   "bytes": 470,
+   "sha256": "4b28b0b82e6ae333ff4e884467d52672517fc1bb609bc527b759948ffdd0487e",
+   "origin": "upstream",
+   "source": "commands/ts-cohort.md",
+   "source_sha256": "62b50355a20f1f43fc48702950e7460a23e376123c3158df7a2288bd95a36324",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-course.md",
+   "bytes": 371,
+   "sha256": "251e4ff2dfbc68bbf6ca471618cfec462b9226985b7dc0da541540c02dcf5f0c",
+   "origin": "upstream",
+   "source": "commands/ts-course.md",
+   "source_sha256": "1068a52001496fa4f5e1c1b3b354cab726e3dc301668049ab2a24bdbb4df4d6d",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-dashboard.md",
+   "bytes": 593,
+   "sha256": "e8da409b2cb059118eac5ee88121311bd7b34205bc2bb1cea09d0e93c6ac87e4",
+   "origin": "upstream",
+   "source": "commands/ts-dashboard.md",
+   "source_sha256": "6dde2d6b0d03c5da33404f2bd74f1aa92e0eee2b45db2e152950b8ddb6c191f6",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-deck.md",
+   "bytes": 498,
+   "sha256": "f2f65a63cd3668ae6071d7b34aba09bb6185389f594c3a7bb4aa286e420a53bf",
+   "origin": "upstream",
+   "source": "commands/ts-deck.md",
+   "source_sha256": "cfbbbbe16740157008b43ac8e64e98a9987bfe96c7306124eec50cb647c4b039",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-diagnostic.md",
+   "bytes": 432,
+   "sha256": "735b7e9e8e41a63c6ececdd0115c21b01c15406f68af9cd25dd1f0b9516a135b",
+   "origin": "upstream",
+   "source": "commands/ts-diagnostic.md",
+   "source_sha256": "7714c5d6cb847aa69d8ce0a23f40fc66043088136ae0a32c624dd3477a1ce934",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-evals.md",
+   "bytes": 390,
+   "sha256": "f33d3b010717c0d8897213e7705c8611e654db6b34758cf8c0666004de9024e5",
+   "origin": "upstream",
+   "source": "commands/ts-evals.md",
+   "source_sha256": "64c7a13db165b3633b49b6108ca5c35c5e3467956a3e9b7e3fea4d5d5b0b4bb5",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-exam.md",
+   "bytes": 389,
+   "sha256": "e909279f0ae95269f056b011311f027e9222e6a991a74529cd6062decaaded15",
+   "origin": "upstream",
+   "source": "commands/ts-exam.md",
+   "source_sha256": "4f84978cdb4b34176ff6ac0ced10b33b726fb32b9997f31e8db4585fb2c236cf",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-feedback.md",
+   "bytes": 354,
+   "sha256": "dc5b6c840fde93a88c8bd86ff568f09bbd5f4ccdf8f2a629ce9b2c2b53812b06",
+   "origin": "upstream",
+   "source": "commands/ts-feedback.md",
+   "source_sha256": "e5cfc7bfd1c0597b07e6eb92a940e3be7509ade60e7ec7834a94d54a35739699",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-full.md",
+   "bytes": 364,
+   "sha256": "2fff6f8a1913fdc5354abf8c0357639c04062610f9801cb4bb5f37c3b8c769ae",
+   "origin": "upstream",
+   "source": "commands/ts-full.md",
+   "source_sha256": "de7e8c1c472ac7281b415ff1e2c30949310721f9cb53ccb32abc3d1896847f4b",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-glossary.md",
+   "bytes": 417,
+   "sha256": "f9823f0af675cd698bc66ccbf40ec6bf4e124e0f65a5d97866e1128699c79695",
+   "origin": "upstream",
+   "source": "commands/ts-glossary.md",
+   "source_sha256": "b630826575c49c6b63c2a1543174e0f4768054258fa6fba0dbfac1220d22d527",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-integrity.md",
+   "bytes": 396,
+   "sha256": "e9036ee7211948226f36b4b0bf2794105ae26819069c6717c1f34778a13caf83",
+   "origin": "upstream",
+   "source": "commands/ts-integrity.md",
+   "source_sha256": "1694543dfe9b23dc3b9a822329f7a594cb2b3b9ed756190c24b5a742a995b706",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-lab.md",
+   "bytes": 466,
+   "sha256": "d17e08de7586e12a25886f211a3168c08593e40d6b77dbfdb3d5223e9bc9a521",
+   "origin": "upstream",
+   "source": "commands/ts-lab.md",
+   "source_sha256": "d7a80de0001b01a6e5d4e6b2ea65f85c5cc30d3a7259b72ce3693f51ded8cc4e",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-lesson.md",
+   "bytes": 350,
+   "sha256": "1e1ef060b047b0367034776632db00fd22a9c3eb4a9ad9b0c0fd30a2894abf54",
+   "origin": "upstream",
+   "source": "commands/ts-lesson.md",
+   "source_sha256": "9b13688f3d0c2be60c3846ccc31a4f681dee54bb9860bd8a37fa1efb0a7f0710",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-letter.md",
+   "bytes": 381,
+   "sha256": "78741c49b3c5896d42f1b2bf38c8bf606b405004f9eb74222c1942fab7c8250f",
+   "origin": "upstream",
+   "source": "commands/ts-letter.md",
+   "source_sha256": "d7d1a64468e22133c3b9b7a27182eda2cce53a4fc3699c6ed6a723c27aa14fcc",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-midcourse.md",
+   "bytes": 344,
+   "sha256": "a90479d8765d07f0fccb1deba582614218fc780459c302efc3520905630871ca",
+   "origin": "upstream",
+   "source": "commands/ts-midcourse.md",
+   "source_sha256": "da15d450cdc447efb78495b2c9c9e2d3607eafb6c6eb49d79b9643422b5b7d9a",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-outcomes.md",
+   "bytes": 349,
+   "sha256": "265a2e88058f5eaceb1fad03a73ada64ba148c4762d4f1bffb694aa2d2db36c8",
+   "origin": "upstream",
+   "source": "commands/ts-outcomes.md",
+   "source_sha256": "381a3db7b0de89df622d3881e3f3a854bcfce4c952f617643f90309030792b45",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-redesign.md",
+   "bytes": 363,
+   "sha256": "23cac0a39f4298bf74643a5c2a8056fae39b9054d87fd202a1fcae8a4a00a8ea",
+   "origin": "upstream",
+   "source": "commands/ts-redesign.md",
+   "source_sha256": "f4c1a7f3ac4e0f78f55f05a10b608608e280af52a8ce1a051cd7b2002886105d",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-rubric.md",
+   "bytes": 342,
+   "sha256": "5820ef9dddce0d98e1db94a73a3c22d19642bfc33bbfc204d14136cb85df50b6",
+   "origin": "upstream",
+   "source": "commands/ts-rubric.md",
+   "source_sha256": "c340dcd84e2d472eae9adf3a726cc2b780a7c2cf13b170c153c7feb0ccc39306",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-script.md",
+   "bytes": 409,
+   "sha256": "afc911160aade6bb5aa430a264cd94e417073febfcc145c072a431db0fb47ad7",
+   "origin": "upstream",
+   "source": "commands/ts-script.md",
+   "source_sha256": "f999476a76e1a44eba76dd4eccc7591b4b282103f1c687d1b96adbf4f9690ecc",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-spec.md",
+   "bytes": 463,
+   "sha256": "54d479ac41cf3feba8e2e23c57755009a62550545ddf7f662504b25e8e4d7c9e",
+   "origin": "upstream",
+   "source": "commands/ts-spec.md",
+   "source_sha256": "d459dc89965a10c74d9904e439a6a2f145264ff564cb009d739ad08be5e4fee1",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-statement.md",
+   "bytes": 372,
+   "sha256": "cc015378c2b1731b15c4438a3d22520973aef7c2423528b8ffb249dafcef9d55",
+   "origin": "upstream",
+   "source": "commands/ts-statement.md",
+   "source_sha256": "c563f46b91c5e54c6ba1bb7142afc0032862531bdf3572ad5c75f25f346538d0",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-status.md",
+   "bytes": 344,
+   "sha256": "e2483597735fd151348d020dfb7a78bc022c1bd148588844b56a9931600e2fdb",
+   "origin": "upstream",
+   "source": "commands/ts-status.md",
+   "source_sha256": "c3645882ed75d58661e516209bbda5bc789e9493474b0b307f703b86fcb95c64",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-syllabus.md",
+   "bytes": 368,
+   "sha256": "1ecb3dffcca155da1a1b33c0d6c4426422125e11a23e079fbae9671073c727b8",
+   "origin": "upstream",
+   "source": "commands/ts-syllabus.md",
+   "source_sha256": "659334ec07f06b9f066f8dfd22336c64c93f469553334815afce9d6acd56ddc5",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "commands/ts-translate.md",
+   "bytes": 413,
+   "sha256": "b8022904a5b27332ec05b7398777381338808a8f47ba0f9720ed7d4bfc4d6094",
+   "origin": "upstream",
+   "source": "commands/ts-translate.md",
+   "source_sha256": "b4624d089c9cb33fb38450288e416fa881c78a9dfabc7d609ed3cc552da4717b",
+   "edits": [
+    "N1"
+   ]
+  },
+  {
+   "path": "course-designer/WORKFLOW.md",
+   "bytes": 9919,
+   "sha256": "0ed9da6819f9699cfc211b9be1843e6687600e157a1e6698edb604b369fe2b3a",
+   "origin": "upstream",
+   "source": "course-designer/SKILL.md",
+   "source_sha256": "a7993a6810e6c974e39d0bdd9c434d6ce5c20d4173a5fc6604f0c545458a1a1a",
+   "edits": [
+    "R05",
+    "C1"
+   ]
+  },
+  {
+   "path": "course-designer/agents/alignment_auditor_agent.md",
+   "bytes": 2502,
+   "sha256": "bc434bb3caa6040f8e93d38600d98f73704c01f275d4e32bc0faa7dbcf3907fb",
+   "origin": "upstream",
+   "source": "course-designer/agents/alignment_auditor_agent.md",
+   "source_sha256": "bc434bb3caa6040f8e93d38600d98f73704c01f275d4e32bc0faa7dbcf3907fb",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/assessment_planner_agent.md",
+   "bytes": 2747,
+   "sha256": "ecf3b5b6fd7af81aee2f0418219d696d3444ee477846382d3028685234ea6c7c",
+   "origin": "upstream",
+   "source": "course-designer/agents/assessment_planner_agent.md",
+   "source_sha256": "ecf3b5b6fd7af81aee2f0418219d696d3444ee477846382d3028685234ea6c7c",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/async_designer_agent.md",
+   "bytes": 4456,
+   "sha256": "091825be77299c9a3898db7bbe6b096a108a51ea5fd8c0d457f90069687dd112",
+   "origin": "upstream",
+   "source": "course-designer/agents/async_designer_agent.md",
+   "source_sha256": "091825be77299c9a3898db7bbe6b096a108a51ea5fd8c0d457f90069687dd112",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/design_mentor_agent.md",
+   "bytes": 3031,
+   "sha256": "820eb53bfa37fc5e0e3e9e64c1cd069283ef6156fe5c5b3eadebf076c043463b",
+   "origin": "upstream",
+   "source": "course-designer/agents/design_mentor_agent.md",
+   "source_sha256": "820eb53bfa37fc5e0e3e9e64c1cd069283ef6156fe5c5b3eadebf076c043463b",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/outcome_architect_agent.md",
+   "bytes": 2684,
+   "sha256": "119821b06462967e1d727fe67e96e53dadfe809d12f83d51b842d0d66970dd07",
+   "origin": "upstream",
+   "source": "course-designer/agents/outcome_architect_agent.md",
+   "source_sha256": "119821b06462967e1d727fe67e96e53dadfe809d12f83d51b842d0d66970dd07",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/schedule_planner_agent.md",
+   "bytes": 2986,
+   "sha256": "55dae38488daa86a631714138cee4222b4e481203b894a6570c45730ea017c6e",
+   "origin": "upstream",
+   "source": "course-designer/agents/schedule_planner_agent.md",
+   "source_sha256": "55dae38488daa86a631714138cee4222b4e481203b894a6570c45730ea017c6e",
+   "edits": []
+  },
+  {
+   "path": "course-designer/agents/syllabus_writer_agent.md",
+   "bytes": 2283,
+   "sha256": "c0dad828277b79ce355152419ef267c1bebf02225e6a183be328c9b779e7f717",
+   "origin": "upstream",
+   "source": "course-designer/agents/syllabus_writer_agent.md",
+   "source_sha256": "c0dad828277b79ce355152419ef267c1bebf02225e6a183be328c9b779e7f717",
+   "edits": []
+  },
+  {
+   "path": "course-designer/references/async_design_guide.md",
+   "bytes": 5225,
+   "sha256": "ea8a11b9868997b3ac33e8da113ec959621d8c50f486618b9ab50623ea2e5d83",
+   "origin": "upstream",
+   "source": "course-designer/references/async_design_guide.md",
+   "source_sha256": "ea8a11b9868997b3ac33e8da113ec959621d8c50f486618b9ab50623ea2e5d83",
+   "edits": []
+  },
+  {
+   "path": "course-designer/references/outcome_verbs.md",
+   "bytes": 2957,
+   "sha256": "c0322b9addbe573004c7b618e105d476bd36a7748e62f13998cb8193f788590f",
+   "origin": "upstream",
+   "source": "course-designer/references/outcome_verbs.md",
+   "source_sha256": "c0322b9addbe573004c7b618e105d476bd36a7748e62f13998cb8193f788590f",
+   "edits": []
+  },
+  {
+   "path": "course-designer/references/syllabus_checklist.md",
+   "bytes": 2028,
+   "sha256": "f16d05fd64aee645d64d67c1e567775aaa1d918be489b092bd057846a81159a0",
+   "origin": "upstream",
+   "source": "course-designer/references/syllabus_checklist.md",
+   "source_sha256": "f16d05fd64aee645d64d67c1e567775aaa1d918be489b092bd057846a81159a0",
+   "edits": []
+  },
+  {
+   "path": "course-designer/templates/async_module_template.md",
+   "bytes": 2737,
+   "sha256": "c2d943709f497ad4b1728abfe9c5465f502861b8f0751d41be5edea65dafd1ce",
+   "origin": "upstream",
+   "source": "course-designer/templates/async_module_template.md",
+   "source_sha256": "c2d943709f497ad4b1728abfe9c5465f502861b8f0751d41be5edea65dafd1ce",
+   "edits": []
+  },
+  {
+   "path": "course-designer/templates/course_passport_starter.yaml",
+   "bytes": 1090,
+   "sha256": "d3c662e3abe23279720df038e4714040040d0bb49195631108facb35ea0f7e25",
+   "origin": "upstream",
+   "source": "course-designer/templates/course_passport_starter.yaml",
+   "source_sha256": "d3c662e3abe23279720df038e4714040040d0bb49195631108facb35ea0f7e25",
+   "edits": []
+  },
+  {
+   "path": "course-designer/templates/syllabus_template.md",
+   "bytes": 2230,
+   "sha256": "0dafa1cddb7c7ea2020418ebf3fc67f7944d55e158abd5f4343345f3c158530f",
+   "origin": "upstream",
+   "source": "course-designer/templates/syllabus_template.md",
+   "source_sha256": "0dafa1cddb7c7ea2020418ebf3fc67f7944d55e158abd5f4343345f3c158530f",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/WORKFLOW.md",
+   "bytes": 8535,
+   "sha256": "0ffa4e1801db1fb9434b19a32251c7138b229d1b5da162cbd44e85a7c803d241",
+   "origin": "upstream",
+   "source": "course-publisher/SKILL.md",
+   "source_sha256": "0ffa4e1801db1fb9434b19a32251c7138b229d1b5da162cbd44e85a7c803d241",
+   "edits": [
+    "R06"
+   ]
+  },
+  {
+   "path": "course-publisher/agents/announcement_writer_agent.md",
+   "bytes": 3817,
+   "sha256": "84693d88111a57f14084b9c6cd4ae2078b539d55dc38d774f2d3f3ff2e11fd9f",
+   "origin": "upstream",
+   "source": "course-publisher/agents/announcement_writer_agent.md",
+   "source_sha256": "84693d88111a57f14084b9c6cd4ae2078b539d55dc38d774f2d3f3ff2e11fd9f",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/agents/comms_planner_agent.md",
+   "bytes": 4007,
+   "sha256": "532001bb487584a632d60479690182739f98818760d98ebeeebfb00160924a0e",
+   "origin": "upstream",
+   "source": "course-publisher/agents/comms_planner_agent.md",
+   "source_sha256": "532001bb487584a632d60479690182739f98818760d98ebeeebfb00160924a0e",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/agents/lms_packager_agent.md",
+   "bytes": 3749,
+   "sha256": "2abbcf8d2daf905dcd593b9939db066718486f71a50eb4e0b72545afb30f49cd",
+   "origin": "upstream",
+   "source": "course-publisher/agents/lms_packager_agent.md",
+   "source_sha256": "2abbcf8d2daf905dcd593b9939db066718486f71a50eb4e0b72545afb30f49cd",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/agents/site_builder_agent.md",
+   "bytes": 3994,
+   "sha256": "7e94216174a056829a4b2bc487060f6f36a0280de34a3f4871efdd9182528163",
+   "origin": "upstream",
+   "source": "course-publisher/agents/site_builder_agent.md",
+   "source_sha256": "7e94216174a056829a4b2bc487060f6f36a0280de34a3f4871efdd9182528163",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/references/student_comms_guide.md",
+   "bytes": 9590,
+   "sha256": "7c616d2306efb2e3b2d38ec0b5d4d3e3eae8ea68ae7e0e2ad5a8e01873ba1899",
+   "origin": "upstream",
+   "source": "course-publisher/references/student_comms_guide.md",
+   "source_sha256": "7c616d2306efb2e3b2d38ec0b5d4d3e3eae8ea68ae7e0e2ad5a8e01873ba1899",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/templates/course_site_structure.md",
+   "bytes": 4675,
+   "sha256": "1c85c6a7f7041516610a817b06b606ee87fc3dc309984424bd0152710d446f76",
+   "origin": "upstream",
+   "source": "course-publisher/templates/course_site_structure.md",
+   "source_sha256": "1c85c6a7f7041516610a817b06b606ee87fc3dc309984424bd0152710d446f76",
+   "edits": []
+  },
+  {
+   "path": "course-publisher/templates/weekly_email_template.md",
+   "bytes": 2892,
+   "sha256": "43884a6864713f74c0b193f2198eb8589cefea0bdb47f1b1f51331db773c50cd",
+   "origin": "upstream",
+   "source": "course-publisher/templates/weekly_email_template.md",
+   "source_sha256": "43884a6864713f74c0b193f2198eb8589cefea0bdb47f1b1f51331db773c50cd",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/WORKFLOW.md",
+   "bytes": 10182,
+   "sha256": "fc541e62df9982d8dfe524ab25e56f7ea557d8670cf565336deadb333df5b9d2",
+   "origin": "upstream",
+   "source": "deck-studio/SKILL.md",
+   "source_sha256": "fc541e62df9982d8dfe524ab25e56f7ea557d8670cf565336deadb333df5b9d2",
+   "edits": [
+    "R07"
+   ]
+  },
+  {
+   "path": "deck-studio/agents/deck_architect_agent.md",
+   "bytes": 3876,
+   "sha256": "701899addb73c90f3a7b53e752bb06580f01b574fa2b605b43b7c9ba199e4533",
+   "origin": "upstream",
+   "source": "deck-studio/agents/deck_architect_agent.md",
+   "source_sha256": "701899addb73c90f3a7b53e752bb06580f01b574fa2b605b43b7c9ba199e4533",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/agents/figure_maker_agent.md",
+   "bytes": 3891,
+   "sha256": "3855689cafcb7e02cd6a609983894e4f6568cf44aa075883f12be181d298ea01",
+   "origin": "upstream",
+   "source": "deck-studio/agents/figure_maker_agent.md",
+   "source_sha256": "3855689cafcb7e02cd6a609983894e4f6568cf44aa075883f12be181d298ea01",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/agents/renderer_agent.md",
+   "bytes": 4511,
+   "sha256": "39ddb11cca641e81503350c321470fd753eb21ae6c68eda1e38896c4d2cc5774",
+   "origin": "upstream",
+   "source": "deck-studio/agents/renderer_agent.md",
+   "source_sha256": "39ddb11cca641e81503350c321470fd753eb21ae6c68eda1e38896c4d2cc5774",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/agents/visual_designer_agent.md",
+   "bytes": 3884,
+   "sha256": "28987a6df1395f64ee69b255ac06c3d2351903d41ad91ace299dd3619219bc03",
+   "origin": "upstream",
+   "source": "deck-studio/agents/visual_designer_agent.md",
+   "source_sha256": "28987a6df1395f64ee69b255ac06c3d2351903d41ad91ace299dd3619219bc03",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/references/slide_design_rules.md",
+   "bytes": 7769,
+   "sha256": "284420596d6395bf97fd6ee653da2558a1fec5d6d8a80410a48f1c7ad2dbafd3",
+   "origin": "upstream",
+   "source": "deck-studio/references/slide_design_rules.md",
+   "source_sha256": "284420596d6395bf97fd6ee653da2558a1fec5d6d8a80410a48f1c7ad2dbafd3",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/references/toolchain_guide.md",
+   "bytes": 7941,
+   "sha256": "87dd335076ec2ed4d8b69e6098b0c368a551b223afb83697bbe5dad1c03f1fc1",
+   "origin": "upstream",
+   "source": "deck-studio/references/toolchain_guide.md",
+   "source_sha256": "87dd335076ec2ed4d8b69e6098b0c368a551b223afb83697bbe5dad1c03f1fc1",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/templates/deck_source_template.md",
+   "bytes": 3947,
+   "sha256": "b368e4b854c3c519c5d6580206b80d71614d8acde59ee325989f1a865d9902ab",
+   "origin": "upstream",
+   "source": "deck-studio/templates/deck_source_template.md",
+   "source_sha256": "b368e4b854c3c519c5d6580206b80d71614d8acde59ee325989f1a865d9902ab",
+   "edits": []
+  },
+  {
+   "path": "deck-studio/templates/theme_spec_template.md",
+   "bytes": 4905,
+   "sha256": "d4a80f2a332eb0ac98cbc37c57750371530e83a525b16df1c765fdc7b8b07220",
+   "origin": "upstream",
+   "source": "deck-studio/templates/theme_spec_template.md",
+   "source_sha256": "d4a80f2a332eb0ac98cbc37c57750371530e83a525b16df1c765fdc7b8b07220",
+   "edits": []
+  },
+  {
+   "path": "docs/ARCHITECTURE.md",
+   "bytes": 13265,
+   "sha256": "6e52c95d06c785b61458745f312c1dd67336d6a7d2b90d53b816b2a162549778",
+   "origin": "upstream",
+   "source": "docs/ARCHITECTURE.md",
+   "source_sha256": "9dae83c0f0394d549efb8589d733f2073adee2a8bee596648627f347528c8996",
+   "edits": [
+    "C5",
+    "C8",
+    "N3",
+    "P1"
+   ]
+  },
+  {
+   "path": "examples/showcase-seminar/README.md",
+   "bytes": 6906,
+   "sha256": "32d0a240e0f6898f400cfbc155a270b6e1ea1ef27f6eaa8471044435de5e65f4",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/README.md",
+   "source_sha256": "32d0a240e0f6898f400cfbc155a270b6e1ea1ef27f6eaa8471044435de5e65f4",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/alignment_report.md",
+   "bytes": 7161,
+   "sha256": "c9af1955f58926a0db8010cfa20c83c6578d995d68a8d70944d503328da610b0",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/alignment_report.md",
+   "source_sha256": "c9af1955f58926a0db8010cfa20c83c6578d995d68a8d70944d503328da610b0",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/course_dashboard.html",
+   "bytes": 34261,
+   "sha256": "8902efdcdb60f4b714255101f11e1ce95de1964c4ac8152b5f578eb2fc0d21c6",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/course_dashboard.html",
+   "source_sha256": "8902efdcdb60f4b714255101f11e1ce95de1964c4ac8152b5f578eb2fc0d21c6",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/course_passport.yaml",
+   "bytes": 16821,
+   "sha256": "3d44878b1535326200b3e63fcbcb0289c56feac2eb7a9b291f60ae12dcac7ad6",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/course_passport.yaml",
+   "source_sha256": "3d44878b1535326200b3e63fcbcb0289c56feac2eb7a9b291f60ae12dcac7ad6",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/feedback_report.md",
+   "bytes": 4863,
+   "sha256": "8e71e874fcd258f1460086aeff9b252baef698db99ee676a91a7e642737adcb0",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/feedback_report.md",
+   "source_sha256": "8e71e874fcd258f1460086aeff9b252baef698db99ee676a91a7e642737adcb0",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/intake_record.md",
+   "bytes": 5296,
+   "sha256": "7c5ee4554d16a09852de5c754a786fd4b02bb0ea3e6eb62b2d4a2f39c4a95eee",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/intake_record.md",
+   "source_sha256": "7c5ee4554d16a09852de5c754a786fd4b02bb0ea3e6eb62b2d4a2f39c4a95eee",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/recommendation_letter_draft.md",
+   "bytes": 6125,
+   "sha256": "7da63daf2b16b3ab827cdb26c0100db527e29c2f50e47f748b89881a928e90ff",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/recommendation_letter_draft.md",
+   "source_sha256": "7da63daf2b16b3ab827cdb26c0100db527e29c2f50e47f748b89881a928e90ff",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/research_essay_brief.md",
+   "bytes": 7751,
+   "sha256": "257bdd9a165bee1c586db58e25bc2e40d602e3d159635cbb0a8948297d4647c1",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/research_essay_brief.md",
+   "source_sha256": "257bdd9a165bee1c586db58e25bc2e40d602e3d159635cbb0a8948297d4647c1",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase-seminar/syllabus.md",
+   "bytes": 10961,
+   "sha256": "144b09d0c5e3e3b107d4eb9703474a75b82618c5a80fa65fbb6ae02b8dc7cc6a",
+   "origin": "upstream",
+   "source": "examples/showcase-seminar/syllabus.md",
+   "source_sha256": "144b09d0c5e3e3b107d4eb9703474a75b82618c5a80fa65fbb6ae02b8dc7cc6a",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/README.md",
+   "bytes": 4559,
+   "sha256": "8a7467b2270701d8ac091f4f03b27a79db548015e2fa5e7e42e031dbf702e43c",
+   "origin": "upstream",
+   "source": "examples/showcase/README.md",
+   "source_sha256": "8a7467b2270701d8ac091f4f03b27a79db548015e2fa5e7e42e031dbf702e43c",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/activity_W06_bias_variance.md",
+   "bytes": 5478,
+   "sha256": "ef24e39f5be38a15fdf9dd56513889d83d64bc765594b564ac62327cc36ab18b",
+   "origin": "upstream",
+   "source": "examples/showcase/activity_W06_bias_variance.md",
+   "source_sha256": "ef24e39f5be38a15fdf9dd56513889d83d64bc765594b564ac62327cc36ab18b",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/alignment_report.md",
+   "bytes": 5808,
+   "sha256": "eb164b26ea15ed7e371b1eca62d578bc19d231c43a1f138578f4ac4390a731af",
+   "origin": "upstream",
+   "source": "examples/showcase/alignment_report.md",
+   "source_sha256": "eb164b26ea15ed7e371b1eca62d578bc19d231c43a1f138578f4ac4390a731af",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/course_dashboard.html",
+   "bytes": 35740,
+   "sha256": "a1eef310722d72658828f751602476d4e7ab59774972b5be56fcd758f909f189",
+   "origin": "upstream",
+   "source": "examples/showcase/course_dashboard.html",
+   "source_sha256": "a1eef310722d72658828f751602476d4e7ab59774972b5be56fcd758f909f189",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/course_passport.yaml",
+   "bytes": 14276,
+   "sha256": "c85bc43afd6a358cb519adbfed0fa9e306d922482b5881ceb2ea8f43262ff110",
+   "origin": "upstream",
+   "source": "examples/showcase/course_passport.yaml",
+   "source_sha256": "c85bc43afd6a358cb519adbfed0fa9e306d922482b5881ceb2ea8f43262ff110",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/exam_blueprint_midterm.md",
+   "bytes": 5087,
+   "sha256": "262507474c872991305162a4615657eec2f97f563ce2f4ce579e117147bbdc01",
+   "origin": "upstream",
+   "source": "examples/showcase/exam_blueprint_midterm.md",
+   "source_sha256": "262507474c872991305162a4615657eec2f97f563ce2f4ce579e117147bbdc01",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/integrity_audit.md",
+   "bytes": 6393,
+   "sha256": "12810817d5ec5e4b3eca0273768ba228235c0ed2061eac4dc36d4db061a58616",
+   "origin": "upstream",
+   "source": "examples/showcase/integrity_audit.md",
+   "source_sha256": "12810817d5ec5e4b3eca0273768ba228235c0ed2061eac4dc36d4db061a58616",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/lesson_W06_overfitting.md",
+   "bytes": 7517,
+   "sha256": "fbbfb5a6754e5492dcda9845eecdfeb90f867c9197fa31fe633eafcc554473a8",
+   "origin": "upstream",
+   "source": "examples/showcase/lesson_W06_overfitting.md",
+   "source_sha256": "fbbfb5a6754e5492dcda9845eecdfeb90f867c9197fa31fe633eafcc554473a8",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/midterm_items_sample.md",
+   "bytes": 8531,
+   "sha256": "b694fd451410a3f0ff4b24a7b1826dad88762d8169f98ec612467ed9b50da616",
+   "origin": "upstream",
+   "source": "examples/showcase/midterm_items_sample.md",
+   "source_sha256": "b694fd451410a3f0ff4b24a7b1826dad88762d8169f98ec612467ed9b50da616",
+   "edits": []
+  },
+  {
+   "path": "examples/showcase/syllabus.md",
+   "bytes": 8810,
+   "sha256": "e6e78980b54d5e7da9ec5f76d1a2dae6e68fc1289df90db0b68d4ce9b4bc2097",
+   "origin": "upstream",
+   "source": "examples/showcase/syllabus.md",
+   "source_sha256": "e6e78980b54d5e7da9ec5f76d1a2dae6e68fc1289df90db0b68d4ce9b4bc2097",
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/README.md",
+   "bytes": 761,
+   "sha256": "057703be7c46b1de92c629515eb8119cc442284942c19438de152d29dfdbe3ff",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-accredit.md",
+   "bytes": 383,
+   "sha256": "f548759f2e3941200f88aaee59ae579c9356522b429fa071707769d6c0b3809d",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-activities.md",
+   "bytes": 384,
+   "sha256": "369565c37c0f05eda31c017e5815af05479be5166d432924bd75477ccf88db8b",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-align.md",
+   "bytes": 381,
+   "sha256": "7cb374cbb9cf475a587747ca5771b8c23787e8d2a8c2093282aa865dd9566f1e",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-announce.md",
+   "bytes": 387,
+   "sha256": "a41dc8149d8166c2083e1b006a752305fe75b835a09c697fa9ba87ee4fb96e19",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-audit.md",
+   "bytes": 444,
+   "sha256": "1bcf890b3986c865ccf2176571c288ed97b2c05460399f12b25e3dbd25b46672",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-calibrate.md",
+   "bytes": 377,
+   "sha256": "9141a7ae22be3a9f551ae196255c37a356700bd70b5a8975d24c79af10e8de25",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-cohort.md",
+   "bytes": 387,
+   "sha256": "bea7fbadadc190cb169549ce027384deb1caa0e16f5889d030a7a6075c439052",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-course.md",
+   "bytes": 371,
+   "sha256": "e5d415d5d4d14154f3b1027e24f3101cded7283b95b488727455459098e60ef8",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-dashboard.md",
+   "bytes": 391,
+   "sha256": "ee29994f979f43416fd08f5e25ac6fe8d8a060369af09ce52e46af8f51386d41",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-deck.md",
+   "bytes": 353,
+   "sha256": "140c0f6e40d1a3f5a2c232e00eb2e398afb1d0c779b92040f89696cbc148c318",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-diagnostic.md",
+   "bytes": 383,
+   "sha256": "652f067fa682d881044abf572dd89dbb5810bd2b501c2711e3306b136b973ba4",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-evals.md",
+   "bytes": 393,
+   "sha256": "f6e44f1227f21bdb9d66ed7a15aa3138caf343973369c85e1c17c0b5f0544190",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-exam.md",
+   "bytes": 386,
+   "sha256": "934771dec7aaebe37111759b4b76aa65073e549da85bd33365919093d13c245c",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-feedback.md",
+   "bytes": 382,
+   "sha256": "2576cf963ec7f9557ad62eefa8bc8cbf4176f677f6650ab8616543cacfba4f55",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-full.md",
+   "bytes": 371,
+   "sha256": "398d62a91b96f32db98075314f7e5a789d85aeb34b8bfc06fea8b6ae5d6feda4",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-glossary.md",
+   "bytes": 392,
+   "sha256": "7741784de9650cd4d5f6b87c5d32f2e1fa838f85bf3752d7b4784eeb97af83a0",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-integrity.md",
+   "bytes": 399,
+   "sha256": "b34929f541caa5af50fcae9819d0ee77be4189b37daebff61c28888812eb7fef",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-lab.md",
+   "bytes": 348,
+   "sha256": "81b48f4ccb4be355b25d090729ce88541e53d78e047cdecec051576b6022a2bc",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-lesson.md",
+   "bytes": 367,
+   "sha256": "bf6dbc6b50dee1750eb2511121aabb6f7d8c6267a2640c6353f73921686eaef4",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-letter.md",
+   "bytes": 398,
+   "sha256": "496c2c2d1b8e594a1fcda534c2cdd84fbd7b092cbc48691a7522c325a465aed5",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-midcourse.md",
+   "bytes": 388,
+   "sha256": "c1cbf7001baf4f400ea51e057acf39662c1cf13a7a7d0883a771fe5964dcafeb",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-outcomes.md",
+   "bytes": 390,
+   "sha256": "9ffaeaa52ac0272249aa25640c1951965b9098c2b05e9edaf0ea01312b2fef89",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-redesign.md",
+   "bytes": 380,
+   "sha256": "7e04751372c2c667270e788c64806857546815e49ec1725601693d124a15eb57",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-rubric.md",
+   "bytes": 372,
+   "sha256": "28631851c4226826b1f590b8ba56462b1257b8f906648085e822189293afc722",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-script.md",
+   "bytes": 366,
+   "sha256": "4549e5134dcea4b60527e095881fc058ab698ccf68362abaa8ffa3f3292dc8b8",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-spec.md",
+   "bytes": 382,
+   "sha256": "3127486d9538d4a016aa5f404fa1d54613a0cb3eb05bf65db4b805ff7d00103d",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-statement.md",
+   "bytes": 409,
+   "sha256": "dd0e764f31da0252f03a5328e1d00f7902a950685339d19211df0a052243374a",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-status.md",
+   "bytes": 369,
+   "sha256": "9d8371d7f5acbb377ebf826c586058adb6aa3d35b73a8314d0ce465513307ba3",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-syllabus.md",
+   "bytes": 389,
+   "sha256": "ed3aa8c8784359319e9a21d9b2f8d007eb7ebfa526439ef617efbc4a4b32aff0",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "install/claude-code-commands/ts-translate.md",
+   "bytes": 394,
+   "sha256": "2a6d4e53956af438b1b04bacea51512be94666ea55c99e4e8e1f74a8f762e062",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "lab-forge/WORKFLOW.md",
+   "bytes": 10617,
+   "sha256": "968b5e6f94db09fdc4a43f41b2dd44dd4ddc59d90fbd34bd8b117c612a09f8e2",
+   "origin": "upstream",
+   "source": "lab-forge/SKILL.md",
+   "source_sha256": "968b5e6f94db09fdc4a43f41b2dd44dd4ddc59d90fbd34bd8b117c612a09f8e2",
+   "edits": [
+    "R08"
+   ]
+  },
+  {
+   "path": "lab-forge/agents/autograder_agent.md",
+   "bytes": 4698,
+   "sha256": "18f04abddb868296bd91de76e32d1dcb4e127e01f466ba4fb1e91ea5c540c016",
+   "origin": "upstream",
+   "source": "lab-forge/agents/autograder_agent.md",
+   "source_sha256": "18f04abddb868296bd91de76e32d1dcb4e127e01f466ba4fb1e91ea5c540c016",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/agents/dataset_smith_agent.md",
+   "bytes": 4491,
+   "sha256": "f366cd92b9f42db129842609b19f5fb8264cdf44f0cc724f84a710ae8de4c4b1",
+   "origin": "upstream",
+   "source": "lab-forge/agents/dataset_smith_agent.md",
+   "source_sha256": "f366cd92b9f42db129842609b19f5fb8264cdf44f0cc724f84a710ae8de4c4b1",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/agents/lab_designer_agent.md",
+   "bytes": 4211,
+   "sha256": "e858c2128530edc6014110589caa7c5e35e075dc7a655d7d9ad38b58ae49ae7d",
+   "origin": "upstream",
+   "source": "lab-forge/agents/lab_designer_agent.md",
+   "source_sha256": "e858c2128530edc6014110589caa7c5e35e075dc7a655d7d9ad38b58ae49ae7d",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/agents/solution_verifier_agent.md",
+   "bytes": 4705,
+   "sha256": "1c3842f34b1fdb59709f94dcd418bb6aeb9ee7679e6b7d913dcdca87c721e681",
+   "origin": "upstream",
+   "source": "lab-forge/agents/solution_verifier_agent.md",
+   "source_sha256": "1c3842f34b1fdb59709f94dcd418bb6aeb9ee7679e6b7d913dcdca87c721e681",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/agents/starter_code_agent.md",
+   "bytes": 4191,
+   "sha256": "92b567e56f4dc22e3334fa1842ddd811e0a23f349e4908a281b84b43d080db0a",
+   "origin": "upstream",
+   "source": "lab-forge/agents/starter_code_agent.md",
+   "source_sha256": "92b567e56f4dc22e3334fa1842ddd811e0a23f349e4908a281b84b43d080db0a",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/references/autograder_patterns.md",
+   "bytes": 7394,
+   "sha256": "b5b52098f53ce1aac64aec972fe7a3d28d0583075585b825494fd354cb325fa5",
+   "origin": "upstream",
+   "source": "lab-forge/references/autograder_patterns.md",
+   "source_sha256": "b5b52098f53ce1aac64aec972fe7a3d28d0583075585b825494fd354cb325fa5",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/references/synthetic_data_patterns.md",
+   "bytes": 7262,
+   "sha256": "36d33e651ab9e19948d424eb9e1f28bdbe6beb4c28259861eef3978c6ea5fca4",
+   "origin": "upstream",
+   "source": "lab-forge/references/synthetic_data_patterns.md",
+   "source_sha256": "36d33e651ab9e19948d424eb9e1f28bdbe6beb4c28259861eef3978c6ea5fca4",
+   "edits": []
+  },
+  {
+   "path": "lab-forge/templates/lab_handout_template.md",
+   "bytes": 4305,
+   "sha256": "14004ea1710e9e856659bac23b7f78e22963014fff26ea1cd68a8175b91ed9e3",
+   "origin": "upstream",
+   "source": "lab-forge/templates/lab_handout_template.md",
+   "source_sha256": "14004ea1710e9e856659bac23b7f78e22963014fff26ea1cd68a8175b91ed9e3",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/WORKFLOW.md",
+   "bytes": 9727,
+   "sha256": "203e98006386f1d405c8bd48a9f0d6b0614e54627e59d36a6f57239592f6da8c",
+   "origin": "upstream",
+   "source": "lesson-builder/SKILL.md",
+   "source_sha256": "203e98006386f1d405c8bd48a9f0d6b0614e54627e59d36a6f57239592f6da8c",
+   "edits": [
+    "R09"
+   ]
+  },
+  {
+   "path": "lesson-builder/agents/activity_designer_agent.md",
+   "bytes": 3694,
+   "sha256": "b7c150252264098ce437b3a8c3a3e150174f390c42f615fa3d09611e81e3bf1f",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/activity_designer_agent.md",
+   "source_sha256": "b7c150252264098ce437b3a8c3a3e150174f390c42f615fa3d09611e81e3bf1f",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/agents/case_study_writer_agent.md",
+   "bytes": 3894,
+   "sha256": "65e130e57b1ef0b6b84529362829f857a8594851d46e4101e49c1eed5ea4fc79",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/case_study_writer_agent.md",
+   "source_sha256": "65e130e57b1ef0b6b84529362829f857a8594851d46e4101e49c1eed5ea4fc79",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/agents/discussion_designer_agent.md",
+   "bytes": 4219,
+   "sha256": "b9dfe96b3b985b5ae258a45d5037eca54c7118eb6431a033936fc0ea5b19b1ee",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/discussion_designer_agent.md",
+   "source_sha256": "b9dfe96b3b985b5ae258a45d5037eca54c7118eb6431a033936fc0ea5b19b1ee",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/agents/lecture_writer_agent.md",
+   "bytes": 3799,
+   "sha256": "081b6922e61303d2d596121078b174024f6628e51ffb97290cdb5b5079d96435",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/lecture_writer_agent.md",
+   "source_sha256": "081b6922e61303d2d596121078b174024f6628e51ffb97290cdb5b5079d96435",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/agents/lesson_planner_agent.md",
+   "bytes": 3750,
+   "sha256": "7a77d487dd7fcef03069fe8fa8c70e03a7edddab3a0856ad5eb9ce9c14f11f6d",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/lesson_planner_agent.md",
+   "source_sha256": "7a77d487dd7fcef03069fe8fa8c70e03a7edddab3a0856ad5eb9ce9c14f11f6d",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/agents/slide_outliner_agent.md",
+   "bytes": 3751,
+   "sha256": "b43fd439d2ffd4ac94a80d716dc45f1d7e4c039d94a6caf4acb328b07eb1a2d9",
+   "origin": "upstream",
+   "source": "lesson-builder/agents/slide_outliner_agent.md",
+   "source_sha256": "b43fd439d2ffd4ac94a80d716dc45f1d7e4c039d94a6caf4acb328b07eb1a2d9",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/references/active_learning_catalog.md",
+   "bytes": 12013,
+   "sha256": "325e0ff0b96c352ef30e1cfdb25e6d2ca1820858f1ba357c7274050dedeee37c",
+   "origin": "upstream",
+   "source": "lesson-builder/references/active_learning_catalog.md",
+   "source_sha256": "325e0ff0b96c352ef30e1cfdb25e6d2ca1820858f1ba357c7274050dedeee37c",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/references/lesson_anatomy.md",
+   "bytes": 5487,
+   "sha256": "e733681c1fb82afef54f532d574c74ba6f815bb5ea10b0d49145bccdfc88b5cb",
+   "origin": "upstream",
+   "source": "lesson-builder/references/lesson_anatomy.md",
+   "source_sha256": "e733681c1fb82afef54f532d574c74ba6f815bb5ea10b0d49145bccdfc88b5cb",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/templates/activity_sheet_template.md",
+   "bytes": 2391,
+   "sha256": "474e046b73c281a6b383e61dc9457b9dc1d83846005c23a04a8efb153c80d07b",
+   "origin": "upstream",
+   "source": "lesson-builder/templates/activity_sheet_template.md",
+   "source_sha256": "474e046b73c281a6b383e61dc9457b9dc1d83846005c23a04a8efb153c80d07b",
+   "edits": []
+  },
+  {
+   "path": "lesson-builder/templates/lesson_plan_template.md",
+   "bytes": 2134,
+   "sha256": "c329627b01af8892828aad2ec5b12f6d62d43897c6a8265d42bf366a3d2e34c2",
+   "origin": "upstream",
+   "source": "lesson-builder/templates/lesson_plan_template.md",
+   "source_sha256": "c329627b01af8892828aad2ec5b12f6d62d43897c6a8265d42bf366a3d2e34c2",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/WORKFLOW.md",
+   "bytes": 10500,
+   "sha256": "5d40b33362169872a72e51d78519ff73eb1441349c7f25499949bbe3580366ec",
+   "origin": "upstream",
+   "source": "media-scripter/SKILL.md",
+   "source_sha256": "5d40b33362169872a72e51d78519ff73eb1441349c7f25499949bbe3580366ec",
+   "edits": [
+    "R10"
+   ]
+  },
+  {
+   "path": "media-scripter/agents/script_writer_agent.md",
+   "bytes": 4672,
+   "sha256": "3fcaa8ddb7c378fcb217cea6062a63de8836e58c68f49de067f79e2f6217bed0",
+   "origin": "upstream",
+   "source": "media-scripter/agents/script_writer_agent.md",
+   "source_sha256": "3fcaa8ddb7c378fcb217cea6062a63de8836e58c68f49de067f79e2f6217bed0",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/agents/segmenter_agent.md",
+   "bytes": 4128,
+   "sha256": "d909e9a15dcbea4341a1a849073d5ffdd91c02e5ccdab53ff9684ccffe1408d3",
+   "origin": "upstream",
+   "source": "media-scripter/agents/segmenter_agent.md",
+   "source_sha256": "d909e9a15dcbea4341a1a849073d5ffdd91c02e5ccdab53ff9684ccffe1408d3",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/agents/storyboard_agent.md",
+   "bytes": 4622,
+   "sha256": "f50fe20374fb29b249ef3ab8db14876f6fa640dd9aee3202d61c0fd4fa688d13",
+   "origin": "upstream",
+   "source": "media-scripter/agents/storyboard_agent.md",
+   "source_sha256": "f50fe20374fb29b249ef3ab8db14876f6fa640dd9aee3202d61c0fd4fa688d13",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/agents/transcript_editor_agent.md",
+   "bytes": 4300,
+   "sha256": "ec7b08981bb67c337bea1c417f17a0c86f31b8a1180a490c48ab9368fceab223",
+   "origin": "upstream",
+   "source": "media-scripter/agents/transcript_editor_agent.md",
+   "source_sha256": "ec7b08981bb67c337bea1c417f17a0c86f31b8a1180a490c48ab9368fceab223",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/references/video_pedagogy.md",
+   "bytes": 7281,
+   "sha256": "4b22f87f453fc7bd125f2680b0f65a4a851302e0c23312a1f5f1ef6573101d26",
+   "origin": "upstream",
+   "source": "media-scripter/references/video_pedagogy.md",
+   "source_sha256": "4b22f87f453fc7bd125f2680b0f65a4a851302e0c23312a1f5f1ef6573101d26",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/templates/script_template.md",
+   "bytes": 3234,
+   "sha256": "2132c731010f6f4b72422bc2eca31165b2154656d98cc1ab0582940e2038343e",
+   "origin": "upstream",
+   "source": "media-scripter/templates/script_template.md",
+   "source_sha256": "2132c731010f6f4b72422bc2eca31165b2154656d98cc1ab0582940e2038343e",
+   "edits": []
+  },
+  {
+   "path": "media-scripter/templates/series_map_template.md",
+   "bytes": 2297,
+   "sha256": "303341d325092b7d0bc8599979a3cb22c8f25624bf22176c55cc865e1ad664b0",
+   "origin": "upstream",
+   "source": "media-scripter/templates/series_map_template.md",
+   "source_sha256": "303341d325092b7d0bc8599979a3cb22c8f25624bf22176c55cc865e1ad664b0",
+   "edits": []
+  },
+  {
+   "path": "requirements-dev.txt",
+   "bytes": 41,
+   "sha256": "dc448a72c7a354a277a2ffd22f173f29208102448f4d66686d513b0640e8fde2",
+   "origin": "upstream",
+   "source": "requirements-dev.txt",
+   "source_sha256": "dc448a72c7a354a277a2ffd22f173f29208102448f4d66686d513b0640e8fde2",
+   "edits": []
+  },
+  {
+   "path": "scripts/build_dashboard.py",
+   "bytes": 23536,
+   "sha256": "3edd89af4e7c327ca572bd3aa953da5cb53500b75b8cbc934c4ef3b1173af55c",
+   "origin": "upstream",
+   "source": "scripts/build_dashboard.py",
+   "source_sha256": "3edd89af4e7c327ca572bd3aa953da5cb53500b75b8cbc934c4ef3b1173af55c",
+   "edits": []
+  },
+  {
+   "path": "scripts/check_alignment_gate.py",
+   "bytes": 10257,
+   "sha256": "82056f55f4eb98b5760ac80d2c6fc1f58c726ae3e9dd943dfe51f8b7dc2f751e",
+   "origin": "upstream",
+   "source": "scripts/check_alignment_gate.py",
+   "source_sha256": "82056f55f4eb98b5760ac80d2c6fc1f58c726ae3e9dd943dfe51f8b7dc2f751e",
+   "edits": []
+  },
+  {
+   "path": "scripts/check_content_markers.py",
+   "bytes": 3544,
+   "sha256": "c9f4b69c2c42043475705d22eb5704fe6704ddf7c70589bceea1e1d9b0eb2957",
+   "origin": "upstream",
+   "source": "scripts/check_content_markers.py",
+   "source_sha256": "c9f4b69c2c42043475705d22eb5704fe6704ddf7c70589bceea1e1d9b0eb2957",
+   "edits": []
+  },
+  {
+   "path": "scripts/check_links.py",
+   "bytes": 3130,
+   "sha256": "7e3971dd6eac4f975a75168db024d5be40fbfcb5ce3be78b6d672b35a2e90a80",
+   "origin": "upstream",
+   "source": "scripts/check_links.py",
+   "source_sha256": "33c46a717ec6ede981857166a1b82b06bf84f33859fef94a362199f0c00e31af",
+   "edits": [
+    "S1"
+   ]
+  },
+  {
+   "path": "scripts/check_passport.py",
+   "bytes": 9431,
+   "sha256": "ec3bc0409259f5ba162c259936346ad6f357e81af532c47fb058c885a7d31091",
+   "origin": "upstream",
+   "source": "scripts/check_passport.py",
+   "source_sha256": "ec3bc0409259f5ba162c259936346ad6f357e81af532c47fb058c885a7d31091",
+   "edits": []
+  },
+  {
+   "path": "scripts/check_quality_gate.py",
+   "bytes": 7376,
+   "sha256": "6b3771bbe6a5e7f13c4fd37cc88ce9f04907c19fd8d949953b48ef5d7b78e8f2",
+   "origin": "upstream",
+   "source": "scripts/check_quality_gate.py",
+   "source_sha256": "6b3771bbe6a5e7f13c4fd37cc88ce9f04907c19fd8d949953b48ef5d7b78e8f2",
+   "edits": []
+  },
+  {
+   "path": "scripts/check_registry_consistency.py",
+   "bytes": 8429,
+   "sha256": "2f45efb14d9ca989595bd4b137fd6f68950089e867b04646e2b6b55454eb9c7b",
+   "origin": "upstream",
+   "source": "scripts/check_registry_consistency.py",
+   "source_sha256": "1786d4339176f014c31e0650d025a06d7ba43b655dc0e2f7bdf796c3af4c8e39",
+   "edits": [
+    "S2"
+   ]
+  },
+  {
+   "path": "scripts/export_lms.py",
+   "bytes": 10980,
+   "sha256": "28ec054f6a9d55fd16d85ec643574abe26a6836c909ddda53594ba034795de96",
+   "origin": "upstream",
+   "source": "scripts/export_lms.py",
+   "source_sha256": "28ec054f6a9d55fd16d85ec643574abe26a6836c909ddda53594ba034795de96",
+   "edits": []
+  },
+  {
+   "path": "scripts/render_document.py",
+   "bytes": 3869,
+   "sha256": "c069a6ee5d4741b0f56a6e0c025734a6a5ca8b7ee0c2dae9882fa47a5cf3309d",
+   "origin": "upstream",
+   "source": "scripts/render_document.py",
+   "source_sha256": "c069a6ee5d4741b0f56a6e0c025734a6a5ca8b7ee0c2dae9882fa47a5cf3309d",
+   "edits": []
+  },
+  {
+   "path": "shared/ai_era_integrity.md",
+   "bytes": 4246,
+   "sha256": "5b834a1755c8ea8f6669899a7a1206b5b9808a7da5d48ac4e9f0d84b2124dccd",
+   "origin": "upstream",
+   "source": "shared/ai_era_integrity.md",
+   "source_sha256": "5b834a1755c8ea8f6669899a7a1206b5b9808a7da5d48ac4e9f0d84b2124dccd",
+   "edits": []
+  },
+  {
+   "path": "shared/alignment_gate_protocol.md",
+   "bytes": 4609,
+   "sha256": "0e3815d7bee36a6a7bf67acfbbc9a2d9cb9b02386c2a65bd306cf21f01d70cab",
+   "origin": "upstream",
+   "source": "shared/alignment_gate_protocol.md",
+   "source_sha256": "0e3815d7bee36a6a7bf67acfbbc9a2d9cb9b02386c2a65bd306cf21f01d70cab",
+   "edits": []
+  },
+  {
+   "path": "shared/checkpoint_protocol.md",
+   "bytes": 4303,
+   "sha256": "5702738f94e0f25a85e8897ac137b30317ef6565c4bed6a849d48f94b38b685b",
+   "origin": "upstream",
+   "source": "shared/checkpoint_protocol.md",
+   "source_sha256": "5702738f94e0f25a85e8897ac137b30317ef6565c4bed6a849d48f94b38b685b",
+   "edits": []
+  },
+  {
+   "path": "shared/course_passport.schema.json",
+   "bytes": 7725,
+   "sha256": "6c895c22fff7a83e5e3bf368e2c26f6fae28437c4d10345467cf851c2ea1a76b",
+   "origin": "upstream",
+   "source": "shared/course_passport.schema.json",
+   "source_sha256": "6c895c22fff7a83e5e3bf368e2c26f6fae28437c4d10345467cf851c2ea1a76b",
+   "edits": []
+  },
+  {
+   "path": "shared/course_passport_schema.md",
+   "bytes": 7385,
+   "sha256": "95b1684f8fb0e40ad460b412304f38707dc5069ed468860f531ba47dd94e5529",
+   "origin": "upstream",
+   "source": "shared/course_passport_schema.md",
+   "source_sha256": "95b1684f8fb0e40ad460b412304f38707dc5069ed468860f531ba47dd94e5529",
+   "edits": []
+  },
+  {
+   "path": "shared/output_self_check.md",
+   "bytes": 2485,
+   "sha256": "22fff569a4cabb6a61d7291cf38390848d44b1926ca0127426110c39c4d98dd3",
+   "origin": "upstream",
+   "source": "shared/output_self_check.md",
+   "source_sha256": "22fff569a4cabb6a61d7291cf38390848d44b1926ca0127426110c39c4d98dd3",
+   "edits": []
+  },
+  {
+   "path": "shared/pedagogy_foundations.md",
+   "bytes": 11473,
+   "sha256": "cc949dc1686c69ed619912a2b315fbb6281b928545de15cd729f0b29c197df42",
+   "origin": "upstream",
+   "source": "shared/pedagogy_foundations.md",
+   "source_sha256": "cc949dc1686c69ed619912a2b315fbb6281b928545de15cd729f0b29c197df42",
+   "edits": []
+  },
+  {
+   "path": "shared/quality_gate_protocol.md",
+   "bytes": 3687,
+   "sha256": "baf1e9408fbcd8a5b18f79edecdc3a27337fc297d009b4b7f91fde5f9b132cf6",
+   "origin": "upstream",
+   "source": "shared/quality_gate_protocol.md",
+   "source_sha256": "baf1e9408fbcd8a5b18f79edecdc3a27337fc297d009b4b7f91fde5f9b132cf6",
+   "edits": []
+  },
+  {
+   "path": "shared/workload_constants.md",
+   "bytes": 1755,
+   "sha256": "e851f1ae716941adfe6298cda343aee18a018d0ff0d31883fcaee348b888eb94",
+   "origin": "upstream",
+   "source": "shared/workload_constants.md",
+   "source_sha256": "0cf6321197c0939d637d3edcd7297b6bb8fc322acc5779dee88068ab2c2a09fb",
+   "edits": [
+    "C9"
+   ]
+  },
+  {
+   "path": "student-mentor/WORKFLOW.md",
+   "bytes": 12940,
+   "sha256": "3f2165f77e7d67988f32a4503e0730cbb881ee479e88fc79979b29b19551d023",
+   "origin": "upstream",
+   "source": "student-mentor/SKILL.md",
+   "source_sha256": "fe71f3fe3b780a50095e84a9416e93f2451b0d49f88ce4a9844c4470c03cc74b",
+   "edits": [
+    "R11",
+    "C3"
+   ]
+  },
+  {
+   "path": "student-mentor/agents/communication_coach_agent.md",
+   "bytes": 4149,
+   "sha256": "9bbe09a48c66a3e8df0aadb21f3f95edee41bef10b095476c1c609b210a5fa1f",
+   "origin": "upstream",
+   "source": "student-mentor/agents/communication_coach_agent.md",
+   "source_sha256": "9bbe09a48c66a3e8df0aadb21f3f95edee41bef10b095476c1c609b210a5fa1f",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/agents/feedback_writer_agent.md",
+   "bytes": 3862,
+   "sha256": "de9b818a61b90bfecb0f7745c687fd4a5e987e813b4dc6943327eabbfa94db71",
+   "origin": "upstream",
+   "source": "student-mentor/agents/feedback_writer_agent.md",
+   "source_sha256": "de9b818a61b90bfecb0f7745c687fd4a5e987e813b4dc6943327eabbfa94db71",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/agents/integrity_case_agent.md",
+   "bytes": 4961,
+   "sha256": "344d6384e46d4cf950b99ca8d10943971aadc3b5bb478f42f57f3af5e9325521",
+   "origin": "upstream",
+   "source": "student-mentor/agents/integrity_case_agent.md",
+   "source_sha256": "344d6384e46d4cf950b99ca8d10943971aadc3b5bb478f42f57f3af5e9325521",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/agents/intervention_advisor_agent.md",
+   "bytes": 3797,
+   "sha256": "76568bfc75f91e5d6e8d93e11b4a24ace283c5c9875db27547105f6d193f00d3",
+   "origin": "upstream",
+   "source": "student-mentor/agents/intervention_advisor_agent.md",
+   "source_sha256": "76568bfc75f91e5d6e8d93e11b4a24ace283c5c9875db27547105f6d193f00d3",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/agents/mentoring_planner_agent.md",
+   "bytes": 4435,
+   "sha256": "58271d19a2a287640e368a0a55e64302147bdb9d03985b16f273b71f85895359",
+   "origin": "upstream",
+   "source": "student-mentor/agents/mentoring_planner_agent.md",
+   "source_sha256": "58271d19a2a287640e368a0a55e64302147bdb9d03985b16f273b71f85895359",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/agents/recommendation_writer_agent.md",
+   "bytes": 4488,
+   "sha256": "2a1dbc947e197e38719119e888b1990aa131c5477e938ed899a2f528bb4496c0",
+   "origin": "upstream",
+   "source": "student-mentor/agents/recommendation_writer_agent.md",
+   "source_sha256": "2a1dbc947e197e38719119e888b1990aa131c5477e938ed899a2f528bb4496c0",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/references/feedback_principles.md",
+   "bytes": 6668,
+   "sha256": "616d0a15594b68fdf4543cbc021ba6e0d1e7e8d321041c021ad72fdd6c6e9f45",
+   "origin": "upstream",
+   "source": "student-mentor/references/feedback_principles.md",
+   "source_sha256": "616d0a15594b68fdf4543cbc021ba6e0d1e7e8d321041c021ad72fdd6c6e9f45",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/references/integrity_process_guide.md",
+   "bytes": 4959,
+   "sha256": "f79cc235cb08df7cc5f6341f7966002bb610c0ced596c68edd6eac775a1eb5dd",
+   "origin": "upstream",
+   "source": "student-mentor/references/integrity_process_guide.md",
+   "source_sha256": "f79cc235cb08df7cc5f6341f7966002bb610c0ced596c68edd6eac775a1eb5dd",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/references/recommendation_letter_guide.md",
+   "bytes": 6227,
+   "sha256": "1c9c0fd91eb2ad3eafa16455542a1b564f2f8ee2819a7505514b3da804cdf258",
+   "origin": "upstream",
+   "source": "student-mentor/references/recommendation_letter_guide.md",
+   "source_sha256": "1c9c0fd91eb2ad3eafa16455542a1b564f2f8ee2819a7505514b3da804cdf258",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/feedback_comments_template.md",
+   "bytes": 1344,
+   "sha256": "8d0e9de6b989c41bffa743339b22786e74f2700c3dc604301720ac930a7072bb",
+   "origin": "upstream",
+   "source": "student-mentor/templates/feedback_comments_template.md",
+   "source_sha256": "8d0e9de6b989c41bffa743339b22786e74f2700c3dc604301720ac930a7072bb",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/intake_record_template.md",
+   "bytes": 1680,
+   "sha256": "1ade66b1c8ef77c23f100f24717f47a05827385c1b600fb3f83e58521708efa1",
+   "origin": "upstream",
+   "source": "student-mentor/templates/intake_record_template.md",
+   "source_sha256": "1ade66b1c8ef77c23f100f24717f47a05827385c1b600fb3f83e58521708efa1",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/integrity_case_template.md",
+   "bytes": 4685,
+   "sha256": "f40fa84b4b32728d242ab0ce39300a510c3b1209e61cfccb961357997229d0ba",
+   "origin": "upstream",
+   "source": "student-mentor/templates/integrity_case_template.md",
+   "source_sha256": "f40fa84b4b32728d242ab0ce39300a510c3b1209e61cfccb961357997229d0ba",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/intervention_outreach_template.md",
+   "bytes": 3393,
+   "sha256": "452526aade73a6f90df3a9610a72f3adebf52793ad8d8e93d762b525d7beacd8",
+   "origin": "upstream",
+   "source": "student-mentor/templates/intervention_outreach_template.md",
+   "source_sha256": "452526aade73a6f90df3a9610a72f3adebf52793ad8d8e93d762b525d7beacd8",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/mentoring_expectations_template.md",
+   "bytes": 4264,
+   "sha256": "9a5755a073b542b0302d502155c2e41de804e335dfef55f10b728522262b49df",
+   "origin": "upstream",
+   "source": "student-mentor/templates/mentoring_expectations_template.md",
+   "source_sha256": "9a5755a073b542b0302d502155c2e41de804e335dfef55f10b728522262b49df",
+   "edits": []
+  },
+  {
+   "path": "student-mentor/templates/recommendation_letter_template.md",
+   "bytes": 2077,
+   "sha256": "05afc87606dfe8dbd0756fa8b6bfd71dc548c418418289ab89ce223ed3e61e01",
+   "origin": "upstream",
+   "source": "student-mentor/templates/recommendation_letter_template.md",
+   "source_sha256": "05afc87606dfe8dbd0756fa8b6bfd71dc548c418418289ab89ce223ed3e61e01",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/WORKFLOW.md",
+   "bytes": 9211,
+   "sha256": "6083848b9e7da68b21877b937ef21d9f8835d897c4b15f54f68b8f085ec1cb2c",
+   "origin": "upstream",
+   "source": "submission-auditor/SKILL.md",
+   "source_sha256": "6083848b9e7da68b21877b937ef21d9f8835d897c4b15f54f68b8f085ec1cb2c",
+   "edits": [
+    "R12"
+   ]
+  },
+  {
+   "path": "submission-auditor/agents/content_auditor_agent.md",
+   "bytes": 3103,
+   "sha256": "1c0c9aff01421454f81408af835ed7afb34e8c1cc577d97b92cff54a7030fb30",
+   "origin": "upstream",
+   "source": "submission-auditor/agents/content_auditor_agent.md",
+   "source_sha256": "1c0c9aff01421454f81408af835ed7afb34e8c1cc577d97b92cff54a7030fb30",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/agents/format_auditor_agent.md",
+   "bytes": 2734,
+   "sha256": "b5dd4cb665ad6badc700e9ce270b8f24c81b5e4e9bfb5aeeef0e00d61e61af1c",
+   "origin": "upstream",
+   "source": "submission-auditor/agents/format_auditor_agent.md",
+   "source_sha256": "b5dd4cb665ad6badc700e9ce270b8f24c81b5e4e9bfb5aeeef0e00d61e61af1c",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/agents/report_writer_agent.md",
+   "bytes": 3465,
+   "sha256": "44c581af1afef9504a09ce104acca26d69dada0ee54701d173aefa3524037abd",
+   "origin": "upstream",
+   "source": "submission-auditor/agents/report_writer_agent.md",
+   "source_sha256": "44c581af1afef9504a09ce104acca26d69dada0ee54701d173aefa3524037abd",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/agents/spec_compiler_agent.md",
+   "bytes": 3061,
+   "sha256": "c805b26293d1cea3a0cb25976b0edf11d221fb894ecc94b9d7e42093e21eff38",
+   "origin": "upstream",
+   "source": "submission-auditor/agents/spec_compiler_agent.md",
+   "source_sha256": "c805b26293d1cea3a0cb25976b0edf11d221fb894ecc94b9d7e42093e21eff38",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/references/spec_design_guide.md",
+   "bytes": 4657,
+   "sha256": "2e5367ac8d2f006c2f9caf84b9d68204c2ff959c7159d9b562dce1d6f365d428",
+   "origin": "upstream",
+   "source": "submission-auditor/references/spec_design_guide.md",
+   "source_sha256": "2e5367ac8d2f006c2f9caf84b9d68204c2ff959c7159d9b562dce1d6f365d428",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/templates/feedback_report_template.md",
+   "bytes": 1433,
+   "sha256": "5c24a2b7c7bf9eff0af4d38d46ab4a72435831c4d594917bb81e01b0319c9502",
+   "origin": "upstream",
+   "source": "submission-auditor/templates/feedback_report_template.md",
+   "source_sha256": "5c24a2b7c7bf9eff0af4d38d46ab4a72435831c4d594917bb81e01b0319c9502",
+   "edits": []
+  },
+  {
+   "path": "submission-auditor/templates/submission_spec_template.md",
+   "bytes": 2028,
+   "sha256": "2afb7fb733a56738a0d5c428c322f17a9bae964018c9e4ae9f0c42d9b9be23fa",
+   "origin": "upstream",
+   "source": "submission-auditor/templates/submission_spec_template.md",
+   "source_sha256": "2afb7fb733a56738a0d5c428c322f17a9bae964018c9e4ae9f0c42d9b9be23fa",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/WORKFLOW.md",
+   "bytes": 8960,
+   "sha256": "e81c0093cbe42f2bacf6d8850e0dac1e3b02fc74ad1368d2fd590c01bfcc9604",
+   "origin": "upstream",
+   "source": "ta-coordinator/SKILL.md",
+   "source_sha256": "e81c0093cbe42f2bacf6d8850e0dac1e3b02fc74ad1368d2fd590c01bfcc9604",
+   "edits": [
+    "R13"
+   ]
+  },
+  {
+   "path": "ta-coordinator/agents/calibration_facilitator_agent.md",
+   "bytes": 4508,
+   "sha256": "205ee4471f440c9b63180256ce2660d2665adc9dc31ac54141a6b9182c4cc1b2",
+   "origin": "upstream",
+   "source": "ta-coordinator/agents/calibration_facilitator_agent.md",
+   "source_sha256": "205ee4471f440c9b63180256ce2660d2665adc9dc31ac54141a6b9182c4cc1b2",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/agents/consistency_auditor_agent.md",
+   "bytes": 4681,
+   "sha256": "ffca37f32291c27bdf48504ac96fd4ebe162cb5709fa3abd76e966af602082bc",
+   "origin": "upstream",
+   "source": "ta-coordinator/agents/consistency_auditor_agent.md",
+   "source_sha256": "ffca37f32291c27bdf48504ac96fd4ebe162cb5709fa3abd76e966af602082bc",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/agents/onboarding_agent.md",
+   "bytes": 4495,
+   "sha256": "95f28bc827171cfb27f09f24fd8e3ad180cc158f2bc799571d488772b828338b",
+   "origin": "upstream",
+   "source": "ta-coordinator/agents/onboarding_agent.md",
+   "source_sha256": "95f28bc827171cfb27f09f24fd8e3ad180cc158f2bc799571d488772b828338b",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/agents/workload_allocator_agent.md",
+   "bytes": 4186,
+   "sha256": "1e74f477d14354f01e931b41231f6d88305cdde506343b874cd0c432f768403d",
+   "origin": "upstream",
+   "source": "ta-coordinator/agents/workload_allocator_agent.md",
+   "source_sha256": "1e74f477d14354f01e931b41231f6d88305cdde506343b874cd0c432f768403d",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/references/ta_management_guide.md",
+   "bytes": 11493,
+   "sha256": "8ffd946dbcf6454b2ff261918d63d023dcfed8bdc7f887dc9aaffee7150a7eec",
+   "origin": "upstream",
+   "source": "ta-coordinator/references/ta_management_guide.md",
+   "source_sha256": "8ffd946dbcf6454b2ff261918d63d023dcfed8bdc7f887dc9aaffee7150a7eec",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/templates/calibration_session_template.md",
+   "bytes": 3705,
+   "sha256": "fb7a37e37b1b21f2ed8a50cf94e7ce6f3a96fd86f192df2f018e72f43bfb43aa",
+   "origin": "upstream",
+   "source": "ta-coordinator/templates/calibration_session_template.md",
+   "source_sha256": "fb7a37e37b1b21f2ed8a50cf94e7ce6f3a96fd86f192df2f018e72f43bfb43aa",
+   "edits": []
+  },
+  {
+   "path": "ta-coordinator/templates/ta_handbook_template.md",
+   "bytes": 4685,
+   "sha256": "8adb8f8491a9d18537c339337aabbc96ae746bbba12fd7709e8ec65e7dfa9050",
+   "origin": "upstream",
+   "source": "ta-coordinator/templates/ta_handbook_template.md",
+   "source_sha256": "8adb8f8491a9d18537c339337aabbc96ae746bbba12fd7709e8ec65e7dfa9050",
+   "edits": []
+  },
+  {
+   "path": "teaching-pipeline/WORKFLOW.md",
+   "bytes": 16247,
+   "sha256": "f1ac166b6b50c955c5386dcef5aa19c43f026647f9871e97757583b37e4b1340",
+   "origin": "upstream",
+   "source": "teaching-pipeline/SKILL.md",
+   "source_sha256": "8196c97c77b1d1f1410bd8c8480c741c9f218d2ea3832d41b5c85b06432123e9",
+   "edits": [
+    "R14",
+    "C4"
+   ]
+  },
+  {
+   "path": "teaching-pipeline/agents/gate_runner_agent.md",
+   "bytes": 5032,
+   "sha256": "bf2e7df3181a0d3ef8aea379422f0a9f89bf4e55ec14ea2110c5f0f949e28c7e",
+   "origin": "upstream",
+   "source": "teaching-pipeline/agents/gate_runner_agent.md",
+   "source_sha256": "57015b191784b998265285ff78acd54547fe9e33ee6d7cb06046b7454b00635c",
+   "edits": [
+    "C8"
+   ]
+  },
+  {
+   "path": "teaching-pipeline/agents/iteration_coach_agent.md",
+   "bytes": 3713,
+   "sha256": "44d8334d092344957fde555e14aac67ad5b2cbaf27d13e08ce09dfd47ba5bd1a",
+   "origin": "upstream",
+   "source": "teaching-pipeline/agents/iteration_coach_agent.md",
+   "source_sha256": "44d8334d092344957fde555e14aac67ad5b2cbaf27d13e08ce09dfd47ba5bd1a",
+   "edits": []
+  },
+  {
+   "path": "teaching-pipeline/agents/passport_keeper_agent.md",
+   "bytes": 3830,
+   "sha256": "3441a535a3b847eb929c916ea1c51a618f4376914d28e412d9ae2eabd4e45ce4",
+   "origin": "upstream",
+   "source": "teaching-pipeline/agents/passport_keeper_agent.md",
+   "source_sha256": "33ecab3b90b07438fb49a1c4958db00da5d3cd379954d163e4d0bb767e9d3aeb",
+   "edits": [
+    "N2"
+   ]
+  },
+  {
+   "path": "teaching-pipeline/agents/pipeline_orchestrator_agent.md",
+   "bytes": 4042,
+   "sha256": "c2a2fd6e461945e0d216d87751730da5e9e419cd995d342fd2e46b3c4764f6f1",
+   "origin": "upstream",
+   "source": "teaching-pipeline/agents/pipeline_orchestrator_agent.md",
+   "source_sha256": "4ac26c5c2621a8a3b3a90ef0ca1aa2a53bda6cb9d9336ce7801dc428409416f6",
+   "edits": [
+    "N2"
+   ]
+  },
+  {
+   "path": "teaching-pipeline/references/pipeline_state_machine.md",
+   "bytes": 9994,
+   "sha256": "1c549a738b1510309ca51eac787d794d36fef59a5bf715fca86d9a72dce0e528",
+   "origin": "upstream",
+   "source": "teaching-pipeline/references/pipeline_state_machine.md",
+   "source_sha256": "1b1091a5164500ca567a0bfc9b74ccea78d6b7d09002d5dd103b0aecb228f473",
+   "edits": [
+    "N2"
+   ]
+  },
+  {
+   "path": "teaching-reflector/WORKFLOW.md",
+   "bytes": 8633,
+   "sha256": "cc58ac81b6aa6be1e790a69d084041de0f349eba2d56a8d83808dfa1c225c213",
+   "origin": "upstream",
+   "source": "teaching-reflector/SKILL.md",
+   "source_sha256": "cc58ac81b6aa6be1e790a69d084041de0f349eba2d56a8d83808dfa1c225c213",
+   "edits": [
+    "R15"
+   ]
+  },
+  {
+   "path": "teaching-reflector/agents/eval_analyst_agent.md",
+   "bytes": 3882,
+   "sha256": "128243385fee5c94c687e84f95aa7e8612c1548361df365dcc09b4b7935c8878",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/eval_analyst_agent.md",
+   "source_sha256": "128243385fee5c94c687e84f95aa7e8612c1548361df365dcc09b4b7935c8878",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/agents/midcourse_agent.md",
+   "bytes": 3779,
+   "sha256": "830598d723a54e6c803023f13af8de27f42961eea42ae37fccb06dcd55bf806f",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/midcourse_agent.md",
+   "source_sha256": "830598d723a54e6c803023f13af8de27f42961eea42ae37fccb06dcd55bf806f",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/agents/observation_prep_agent.md",
+   "bytes": 3751,
+   "sha256": "95a4a604167359d0b16eec9d617814b19b6adba7258ee9fd1afec4deaca3f6d0",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/observation_prep_agent.md",
+   "source_sha256": "95a4a604167359d0b16eec9d617814b19b6adba7258ee9fd1afec4deaca3f6d0",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/agents/portfolio_builder_agent.md",
+   "bytes": 3735,
+   "sha256": "ee81ee242c3698de1d785c3b9abbe0d38cc7edec507714eb13051f668e3f8e3c",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/portfolio_builder_agent.md",
+   "source_sha256": "ee81ee242c3698de1d785c3b9abbe0d38cc7edec507714eb13051f668e3f8e3c",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/agents/sotl_consultant_agent.md",
+   "bytes": 4591,
+   "sha256": "f92111490b10768da4d59dabf1491715ea546df08ae577a1cbb74ee66d75f286",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/sotl_consultant_agent.md",
+   "source_sha256": "f92111490b10768da4d59dabf1491715ea546df08ae577a1cbb74ee66d75f286",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/agents/statement_writer_agent.md",
+   "bytes": 4026,
+   "sha256": "70b94871d8b30ce78faf55a01e7ab354cd20d4eb9752da0231d339aab0b093f3",
+   "origin": "upstream",
+   "source": "teaching-reflector/agents/statement_writer_agent.md",
+   "source_sha256": "70b94871d8b30ce78faf55a01e7ab354cd20d4eb9752da0231d339aab0b093f3",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/references/eval_analysis_protocol.md",
+   "bytes": 7746,
+   "sha256": "0ad415b4a5fb3c3775fe6988d45e3a3422ee892153b918930f0b020f2966f927",
+   "origin": "upstream",
+   "source": "teaching-reflector/references/eval_analysis_protocol.md",
+   "source_sha256": "0ad415b4a5fb3c3775fe6988d45e3a3422ee892153b918930f0b020f2966f927",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/references/teaching_statement_guide.md",
+   "bytes": 7714,
+   "sha256": "46d8b600f49114cd5f188d3bdab96a5e653a26bbf6d9bbf88a9422de18c5d069",
+   "origin": "upstream",
+   "source": "teaching-reflector/references/teaching_statement_guide.md",
+   "source_sha256": "46d8b600f49114cd5f188d3bdab96a5e653a26bbf6d9bbf88a9422de18c5d069",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/templates/midcourse_survey_template.md",
+   "bytes": 3332,
+   "sha256": "b7284555cce9e7e31eae0b600a7177e6193ac3f1694cdc6d74869625907fae43",
+   "origin": "upstream",
+   "source": "teaching-reflector/templates/midcourse_survey_template.md",
+   "source_sha256": "b7284555cce9e7e31eae0b600a7177e6193ac3f1694cdc6d74869625907fae43",
+   "edits": []
+  },
+  {
+   "path": "teaching-reflector/templates/observation_brief_template.md",
+   "bytes": 4063,
+   "sha256": "e9722c22adb70fee9da2147c0d09ec25a97a1ccaa5aaa0c2c2eb1681b4db9527",
+   "origin": "upstream",
+   "source": "teaching-reflector/templates/observation_brief_template.md",
+   "source_sha256": "e9722c22adb70fee9da2147c0d09ec25a97a1ccaa5aaa0c2c2eb1681b4db9527",
+   "edits": []
+  },
+  {
+   "path": "tests/test_adoption_tooling.py",
+   "bytes": 2949,
+   "sha256": "7c2b6bf888ad9a36d5a68bb42a427d5d6f360596913fb2d38252a52226af844a",
+   "origin": "upstream",
+   "source": "tests/test_adoption_tooling.py",
+   "source_sha256": "7c2b6bf888ad9a36d5a68bb42a427d5d6f360596913fb2d38252a52226af844a",
+   "edits": []
+  },
+  {
+   "path": "tests/test_content_markers.py",
+   "bytes": 1167,
+   "sha256": "0db725a5227bf6e1374a7ca263457f72c069878a4d0257a6929f52cb4b76c6b9",
+   "origin": "upstream",
+   "source": "tests/test_content_markers.py",
+   "source_sha256": "0db725a5227bf6e1374a7ca263457f72c069878a4d0257a6929f52cb4b76c6b9",
+   "edits": []
+  },
+  {
+   "path": "tests/test_dashboard.py",
+   "bytes": 2828,
+   "sha256": "0b9e4f8c42e0e4cb770434aab9920159daaf9142b3c9d0d7222fdc33d7863dd9",
+   "origin": "upstream",
+   "source": "tests/test_dashboard.py",
+   "source_sha256": "0b9e4f8c42e0e4cb770434aab9920159daaf9142b3c9d0d7222fdc33d7863dd9",
+   "edits": []
+  },
+  {
+   "path": "tests/test_merge_integrity.py",
+   "bytes": 2010,
+   "sha256": "e845a56cf3ed864d6acf21a9b82dfc67137fea3a69ed5410532bde3b99b58ac2",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tests/test_quality_gate.py",
+   "bytes": 1398,
+   "sha256": "b346bfbe91e0a12bb4349c5b96a9e9acde6fd41661a646036561a79ad52b14c9",
+   "origin": "upstream",
+   "source": "tests/test_quality_gate.py",
+   "source_sha256": "b346bfbe91e0a12bb4349c5b96a9e9acde6fd41661a646036561a79ad52b14c9",
+   "edits": []
+  },
+  {
+   "path": "tests/test_registry.py",
+   "bytes": 371,
+   "sha256": "bd475004a9168299ac4635eb52a3b94693219573c60fdbd1c722b6691a6814ed",
+   "origin": "upstream",
+   "source": "tests/test_registry.py",
+   "source_sha256": "bd475004a9168299ac4635eb52a3b94693219573c60fdbd1c722b6691a6814ed",
+   "edits": []
+  },
+  {
+   "path": "tests/test_repo_integrity.py",
+   "bytes": 2744,
+   "sha256": "1e013e1636acfac1dfd17bb70dfb3c807379e6b86d2fae4d5ed06c68ee76f03b",
+   "origin": "upstream",
+   "source": "tests/test_repo_integrity.py",
+   "source_sha256": "1e013e1636acfac1dfd17bb70dfb3c807379e6b86d2fae4d5ed06c68ee76f03b",
+   "edits": []
+  },
+  {
+   "path": "tests/test_validators.py",
+   "bytes": 8187,
+   "sha256": "61590c12d38a57afa2789d9ab5aa57e354c882b9c12d92280fee04fb315907ce",
+   "origin": "upstream",
+   "source": "tests/test_validators.py",
+   "source_sha256": "61590c12d38a57afa2789d9ab5aa57e354c882b9c12d92280fee04fb315907ce",
+   "edits": []
+  },
+  {
+   "path": "tools/merge/GATES.md",
+   "bytes": 11197,
+   "sha256": "686f331c8943cd460f360f05519428791691a65454cfc60d6ef7c04a931fc2ce",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/README.md",
+   "bytes": 972,
+   "sha256": "91562c62bbf51301a73f1ff2d3bc2983470a6dfe9a39195f549dee801b724f60",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/build_merge.py",
+   "bytes": 23212,
+   "sha256": "c1d18cb58b616f37d290d0bf742519084bb3c8af7b43b2c6e0af36c42108b995",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/edits.json",
+   "bytes": 28060,
+   "sha256": "5a7ecaa91c14056eb5a6e7569bb3a4220f275c262141c196a4eda428909495b9",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/gate_run.py",
+   "bytes": 9339,
+   "sha256": "0214ebfd84dccb97a303a8bb3515209e7a301cbf3da71934bc49d3d13231c9c0",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/make_edits.py",
+   "bytes": 19440,
+   "sha256": "814be706a14f3e5a07979fdafdf00ae0867a4123c97c3112e5011583ad898d40",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/notes_template.md",
+   "bytes": 20069,
+   "sha256": "89c67120159e65023e4a89a6a3ed419cd13bc4638372a7cd92822acf0c33aaa3",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/router_template.md",
+   "bytes": 22719,
+   "sha256": "9775406952ac65bbdd6cd22294245f181aa2d85bc30955f0e44d18e536f69d25",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "tools/merge/verify_merge.py",
+   "bytes": 60221,
+   "sha256": "1ed821aab127732c47f3d23ff7f83c01d213736db687c31568674ec0f30f486b",
+   "origin": "generated",
+   "source": null,
+   "source_sha256": null,
+   "edits": []
+  },
+  {
+   "path": "upstream/claude-plugin/marketplace.json",
+   "bytes": 478,
+   "sha256": "13159aef55cc957bc7a52ac546b3fcda8f831d766ab8ae5505b5e9b7f1cd6475",
+   "origin": "upstream",
+   "source": ".claude-plugin/marketplace.json",
+   "source_sha256": "13159aef55cc957bc7a52ac546b3fcda8f831d766ab8ae5505b5e9b7f1cd6475",
+   "edits": [
+    "L02"
+   ]
+  },
+  {
+   "path": "upstream/claude-plugin/plugin.json",
+   "bytes": 968,
+   "sha256": "76c298c664f468b9f99ba0353f3a95377961c1f26f35b9c25364974b5c1e0f87",
+   "origin": "upstream",
+   "source": ".claude-plugin/plugin.json",
+   "source_sha256": "76c298c664f468b9f99ba0353f3a95377961c1f26f35b9c25364974b5c1e0f87",
+   "edits": [
+    "L01"
+   ]
+  },
+  {
+   "path": "upstream/dev/build_codex.py",
+   "bytes": 22802,
+   "sha256": "2e9018f094ed6ef3992698507c67c6c73d6513f66c32bf4626c7d65a5f306332",
+   "origin": "upstream",
+   "source": "scripts/build_codex.py",
+   "source_sha256": "2e9018f094ed6ef3992698507c67c6c73d6513f66c32bf4626c7d65a5f306332",
+   "edits": [
+    "L07"
+   ]
+  },
+  {
+   "path": "upstream/dev/test_build_codex.py",
+   "bytes": 5553,
+   "sha256": "e1ce6a905328bde6ca2cc9f207430397be776c8e35106bf88eb5a39a178abbde",
+   "origin": "upstream",
+   "source": "tests/test_build_codex.py",
+   "source_sha256": "e1ce6a905328bde6ca2cc9f207430397be776c8e35106bf88eb5a39a178abbde",
+   "edits": [
+    "L08"
+   ]
+  },
+  {
+   "path": "upstream/github/ISSUE_TEMPLATE/config.yml",
+   "bytes": 219,
+   "sha256": "6c3841abd7132bcf3a7ed676d9c56ad80e3257920978bc03a7ac432f7d6ec974",
+   "origin": "upstream",
+   "source": ".github/ISSUE_TEMPLATE/config.yml",
+   "source_sha256": "6c3841abd7132bcf3a7ed676d9c56ad80e3257920978bc03a7ac432f7d6ec974",
+   "edits": [
+    "L03"
+   ]
+  },
+  {
+   "path": "upstream/github/ISSUE_TEMPLATE/skill-misbehavior.md",
+   "bytes": 741,
+   "sha256": "7d7d7fecef5577c58211548629a32c97b6fa2c6cc67648ad98c3eb0495a625d3",
+   "origin": "upstream",
+   "source": ".github/ISSUE_TEMPLATE/skill-misbehavior.md",
+   "source_sha256": "7d7d7fecef5577c58211548629a32c97b6fa2c6cc67648ad98c3eb0495a625d3",
+   "edits": [
+    "L04"
+   ]
+  },
+  {
+   "path": "upstream/github/ISSUE_TEMPLATE/skill-request.md",
+   "bytes": 571,
+   "sha256": "ba1d905828fb88b816fd74dc7c5df07b34fc33301e7440b6522452a9df7f18ca",
+   "origin": "upstream",
+   "source": ".github/ISSUE_TEMPLATE/skill-request.md",
+   "source_sha256": "ba1d905828fb88b816fd74dc7c5df07b34fc33301e7440b6522452a9df7f18ca",
+   "edits": [
+    "L05"
+   ]
+  },
+  {
+   "path": "upstream/github/workflows/ci.yml",
+   "bytes": 1071,
+   "sha256": "00fcb9b68ca2f956cc37c9b9faa0ca46dffeefc071ac9732f41ef18f0488464d",
+   "origin": "upstream",
+   "source": ".github/workflows/ci.yml",
+   "source_sha256": "00fcb9b68ca2f956cc37c9b9faa0ca46dffeefc071ac9732f41ef18f0488464d",
+   "edits": [
+    "L06"
+   ]
+  }
+ ]
+}
